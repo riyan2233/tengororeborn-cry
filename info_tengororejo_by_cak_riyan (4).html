@@ -1,0 +1,1174 @@
+<!-- ...ရှင် -->
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Tengororejo by Cak Riyan</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#991b1b', 
+                        secondary: '#d97706', 
+                        dark: '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes gandrungDance {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            25% { transform: translateY(-8px) rotate(-2deg) scale(1.02); }
+            75% { transform: translateY(-4px) rotate(2deg) scale(1.02); }
+        }
+        .animate-gandrung {
+            animation: gandrungDance 3.5s ease-in-out infinite;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER -->
+    <header class="bg-gradient-to-r from-red-950 via-red-900 to-amber-950 text-white shadow-xl sticky top-0 z-50 border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            
+            <!-- Branding & Gandrung Animated Icon -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg animate-gandrung text-red-950 text-2xl font-bold border-2 border-amber-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=150&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-2xl font-black tracking-tight flex items-center space-x-2">
+                        <span>Info Tengororejo</span>
+                        <span class="bg-amber-400/20 text-amber-300 text-[10px] px-2 py-0.5 rounded-full border border-amber-400/30 font-semibold hidden sm:inline-block">Songgon, Banyuwangi</span>
+                    </h1>
+                    <p class="text-xs text-amber-200 font-medium">Portal Berita Warga Dusun • By Cak Riyan</p>
+                </div>
+            </div>
+
+            <!-- Controls & Admin Auth Trigger -->
+            <div class="flex items-center space-x-3 mt-2 sm:mt-0">
+                <!-- Music Player Control (Admin & Public) -->
+                <div class="bg-black/40 px-3 py-1.5 rounded-full flex items-center space-x-2 text-xs backdrop-blur-md border border-white/20 shadow-inner">
+                    <button id="musicToggleBtn" onclick="toggleBackgroundMusic()" class="w-7 h-7 bg-amber-400 text-red-950 rounded-full flex items-center justify-center hover:scale-110 transition shadow font-bold">
+                        <i id="musicIcon" class="fa-solid fa-play ml-0.5 text-xs"></i>
+                    </button>
+                    <span id="musicStatusText" class="hidden sm:inline text-white/90 font-medium">Musik Gamelan</span>
+                    <audio id="bgMusic" loop src="https://actions.google.com/sounds/v1/ambiences/traditional_market.ogg"></audio>
+                </div>
+
+                <!-- Auth Nav Area -->
+                <div id="authNavArea">
+                    <button onclick="openAuthModal()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-6 space-y-8">
+
+        <!-- HERO SECTION WITH USER-SUPPLIED BANYUWANGI TRADITIONAL CARNIVAL GANDRUNG AESTHETIC BACKGROUND -->
+        <section class="relative rounded-3xl overflow-hidden shadow-2xl border border-red-900/40 text-white min-h-[460px] flex items-center">
+            <!-- Background Image using the requested elegant traditional/carnival Banyuwangi costume photo -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-red-950/95 via-red-900/85 to-black/75 backdrop-blur-[2px]"></div>
+            
+            <div class="relative z-10 p-6 md:p-12 max-w-3xl space-y-5">
+                <div class="flex flex-wrap gap-2 items-center">
+                    <span class="bg-amber-500/30 text-amber-300 border border-amber-400/40 text-xs font-semibold px-3.5 py-1 rounded-full uppercase tracking-wider inline-flex items-center space-x-2 shadow-sm">
+                        <i class="fa-solid fa-star text-[10px]"></i>
+                        <span>Portal Resmi Warga Dusun Tengororejo</span>
+                    </span>
+                    <span class="bg-red-900/60 text-white border border-red-500/40 text-xs font-semibold px-3.5 py-1 rounded-full inline-flex items-center space-x-1.5">
+                        <i class="fa-solid fa-location-dot text-amber-400 text-[10px]"></i>
+                        <span>Songgon, Banyuwangi</span>
+                    </span>
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white drop-shadow-md">
+                    Informasi Terkini Warga Dusun Tengororejo & Budaya Banyuwangi
+                </h2>
+                
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed font-normal">
+                    Media berita online resmi Dusun Tengororejo yang dikelola oleh Cak Riyan. Dapatkan informasi kegiatan warga, galeri seni budaya penari Gandrung & Karnaval tradisional, serta cuaca & jam digital secara real-time.
+                </p>
+
+                <!-- WIDGETS: DIGITAL CLOCK & WEATHER SONGGON BANYUWANGI -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <!-- Digital Clock Box -->
+                    <div class="bg-black/50 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-amber-500/20 text-amber-300 rounded-xl flex items-center justify-center text-2xl font-bold border border-amber-400/30">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <p id="liveClock" class="text-2xl md:text-3xl font-black text-amber-300 tracking-wider">00:00:00 WIB</p>
+                            <p id="liveDate" class="text-xs text-slate-300 font-medium">Selasa, 3 November 2026</p>
+                        </div>
+                    </div>
+
+                    <!-- Weather Songgon Banyuwangi Box -->
+                    <div class="bg-black/50 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-sky-500/20 text-sky-300 rounded-xl flex items-center justify-center text-2xl font-bold border border-sky-400/30">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-sky-300 uppercase tracking-wider">Songgon, Banyuwangi</h4>
+                                <p id="weatherTemp" class="text-xl font-bold text-white">28°C • Berawan Sejuk</p>
+                            </div>
+                        </div>
+                        <div class="text-right text-[11px] text-slate-300 font-medium">
+                            <p><i class="fa-solid fa-droplet mr-1 text-sky-400"></i><span id="weatherHum">78%</span></p>
+                            <p><i class="fa-solid fa-wind mr-1 text-emerald-400"></i><span id="weatherWind">12 km/j</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Gandrung Maskot Indicator -->
+            <div class="absolute right-6 bottom-6 hidden lg:flex items-center space-x-3 bg-black/60 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/20 shadow-2xl animate-gandrung">
+                <div class="w-10 h-10 rounded-full overflow-hidden border border-amber-300">
+                    <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=150&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-amber-300">Pesona Seni Banyuwangi</p>
+                    <p class="text-[10px] text-white/80">Tari Gandrung Tengororejo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMIN DASHBOARD PANEL (HIDDEN UNLESS AUTHENTICATED AS ADMIN) -->
+        <section id="adminPanelContainer" class="hidden bg-amber-50/95 border-2 border-amber-400/80 rounded-3xl p-6 shadow-2xl space-y-6">
+            <div class="flex flex-wrap justify-between items-center border-b border-amber-200 pb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 bg-amber-500 text-red-950 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-red-950">Panel Kontrol Admin (Cak Riyan)</h3>
+                        <p class="text-xs text-slate-600">Database Firebase Online: <span class="text-emerald-700 font-bold">Sinkronisasi Otomatis Aktif</span></p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="toggleAdminMusicModal()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-3.5 py-2 rounded-xl text-xs shadow transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Musik Admin</span>
+                    </button>
+                    <button onclick="logoutAdmin()" class="bg-red-700 hover:bg-red-800 text-white font-medium px-4 py-2 rounded-xl text-xs shadow transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Keluar</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Tabs Navigation -->
+            <div class="flex flex-wrap gap-2">
+                <button onclick="switchAdminTab('berita')" id="tabBtnBerita" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-red-900 text-white shadow transition">Kelola Berita</button>
+                <button onclick="switchAdminTab('agenda')" id="tabBtnAgenda" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm">Kelola Agenda</button>
+                <button onclick="switchAdminTab('galeri')" id="tabBtnGaleri" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm">Kelola Galeri Foto</button>
+                <button onclick="switchAdminTab('kontak')" id="tabBtnKontak" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm">Kelola Kontak</button>
+            </div>
+
+            <!-- TAB 1: BERITA -->
+            <div id="adminTabBerita" class="admin-tab-content space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-pen-to-square text-red-700"></i>
+                    <span id="formBeritaTitle">Tambah Berita / Kegiatan Baru</span>
+                </h4>
+                <form id="beritaForm" onsubmit="handleBeritaSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="beritaId">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Judul Berita</label>
+                        <input type="text" id="beritaJudul" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Kategori</label>
+                            <select id="beritaKategori" class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                                <option value="Berita Utama">Berita Utama</option>
+                                <option value="Kegiatan Warga">Kegiatan Warga</option>
+                                <option value="Seni & Budaya">Seni & Budaya</option>
+                                <option value="Pembangunan">Pembangunan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Upload File Foto (JPG/PNG)</label>
+                            <div class="flex space-x-2">
+                                <input type="text" id="beritaImage" placeholder="URL atau upload file..." class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                                <input type="file" id="beritaFileUp" accept="image/png, image/jpeg" onchange="convertFileToBase64(this, 'beritaImage')" class="hidden">
+                                <button type="button" onclick="document.getElementById('beritaFileUp').click()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">Pilih File</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Isi Berita / Keterangan Lengkap</label>
+                        <textarea id="beritaIsi" rows="4" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetBeritaForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-red-800 hover:bg-red-900 text-white text-xs font-bold rounded-xl shadow">Simpan Berita</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB 2: AGENDA -->
+            <div id="adminTabAgenda" class="admin-tab-content hidden space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-calendar-days text-amber-600"></i>
+                    <span id="formAgendaTitle">Tambah Agenda Kegiatan Dusun</span>
+                </h4>
+                <form id="agendaForm" onsubmit="handleAgendaSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="agendaId">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Kegiatan</label>
+                            <input type="text" id="agendaJudul" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Waktu / Tanggal</label>
+                            <input type="text" id="agendaWaktu" placeholder="Contoh: Minggu, 15 November • 19.00 WIB" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Lokasi / Tempat</label>
+                        <input type="text" id="agendaLokasi" placeholder="Contoh: Balai Dusun Tengororejo" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetAgendaForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl shadow">Simpan Agenda</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB 3: GALERI -->
+            <div id="adminTabGaleri" class="admin-tab-content hidden space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-image text-red-700"></i>
+                    <span>Upload Foto Galeri (JPG / PNG)</span>
+                </h4>
+                <form id="galeriForm" onsubmit="handleGaleriSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="galeriId">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Keterangan Foto</label>
+                        <input type="text" id="galeriJudul" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Pilih File Foto JPG/PNG</label>
+                        <div class="flex space-x-2">
+                            <input type="text" id="galeriUrl" placeholder="URL atau upload file..." required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                            <input type="file" id="galeriFileUp" accept="image/png, image/jpeg" onchange="convertFileToBase64(this, 'galeriUrl')" class="hidden">
+                            <button type="button" onclick="document.getElementById('galeriFileUp').click()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">Pilih File</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetGaleriForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-red-800 hover:bg-red-900 text-white text-xs font-bold rounded-xl shadow">Simpan Foto Galeri</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB 4: KONTAK -->
+            <div id="adminTabKontak" class="admin-tab-content hidden space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-address-book text-amber-600"></i>
+                    <span id="formKontakTitle">Tambah / Edit Kontak Penting</span>
+                </h4>
+                <form id="kontakForm" onsubmit="handleKontakSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="kontakId">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Pejabat / Pengurus</label>
+                            <input type="text" id="kontakNama" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Jabatan / Peran</label>
+                            <input type="text" id="kontakJabatan" placeholder="Contoh: Kepala Dusun Tengororejo" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp (Contoh: 08123456789)</label>
+                        <input type="text" id="kontakTelp" placeholder="08xxxxxxxxxx" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetKontakForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl shadow">Simpan Kontak</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- MAIN GRID: BERITA & AGENDA -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- LEFT 2 COLS: BERITA TERKINI -->
+            <div id="beritaSection" class="lg:col-span-2 space-y-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3.5 h-8 bg-red-700 rounded-full shadow"></div>
+                        <h3 class="text-xl font-bold text-slate-900 tracking-tight">Berita & Kegiatan Dusun</h3>
+                    </div>
+                    <span class="text-xs text-slate-500 bg-white px-3 py-1.5 rounded-full border shadow-sm font-medium">Sinkron Otomatis Real-time</span>
+                </div>
+
+                <div id="beritaListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="col-span-full bg-white p-8 rounded-3xl text-center text-slate-400 border border-slate-200 shadow-sm">
+                        <i class="fa-solid fa-spinner fa-spin text-3xl mb-2 text-red-700"></i>
+                        <p class="text-sm font-medium">Memuat data berita dari server Firebase...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT 1 COL: AGENDA & GANDRUNG MASKOT -->
+            <div class="space-y-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3.5 h-8 bg-amber-500 rounded-full shadow"></div>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Agenda Warga</h3>
+                </div>
+
+                <div id="agendaListContainer" class="space-y-4">
+                    <div class="bg-white p-6 rounded-3xl text-center text-slate-400 border border-slate-200 shadow-sm">
+                        <i class="fa-solid fa-spinner fa-spin text-lg mb-1 text-amber-600"></i>
+                        <p class="text-xs">Memuat agenda...</p>
+                    </div>
+                </div>
+
+                <!-- Gandrung Cultural Card -->
+                <div class="bg-gradient-to-br from-amber-500 via-amber-600 to-red-800 text-white rounded-3xl p-6 shadow-xl text-center relative overflow-hidden border border-amber-300/40">
+                    <div class="absolute -right-4 -bottom-4 opacity-15 w-32 h-32 rounded-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=300&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl overflow-hidden mx-auto mb-3 border-2 border-amber-200 shadow-lg animate-gandrung">
+                        <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=150&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-extrabold text-lg mb-1 drop-shadow">Pesona Seni Budaya Banyuwangi</h4>
+                    <p class="text-xs text-amber-100 leading-relaxed mb-4">
+                        Dusun Tengororejo senantiasa menjunjung tinggi nilai budaya leluhur penari Gandrung sebagai simbol kebersamaan, keramahan, dan gotong royong warga Songgon.
+                    </p>
+                    <span class="inline-block bg-black/30 px-3.5 py-1.5 rounded-full text-xs font-bold backdrop-blur border border-white/20 shadow">
+                        #TengororejoMajuDanBerbudaya
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALERI FOTO WARGA -->
+        <section class="space-y-6 pt-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3.5 h-8 bg-red-700 rounded-full shadow"></div>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Galeri Foto Dusun</h3>
+                </div>
+                <span class="text-xs text-slate-500 font-medium">Dokumentasi JPG/PNG Warga</span>
+            </div>
+
+            <div id="galeriListContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 border border-slate-200">
+                    <p class="text-xs font-medium">Memuat galeri foto...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK PENTING -->
+        <section id="kontakSection" class="space-y-6 pt-4 pb-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3.5 h-8 bg-amber-500 rounded-full shadow"></div>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Kontak Pejabat & Pengurus Dusun</h3>
+                </div>
+                <span class="text-xs text-slate-500 font-medium">Layanan Cepat Warga</span>
+            </div>
+
+            <div id="kontakListContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 border border-slate-200">
+                    <p class="text-xs font-medium">Memuat daftar kontak...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden border border-amber-400">
+                    <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=100&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-white font-bold text-sm">Info Tengororejo by Cak Riyan</p>
+                    <p class="text-slate-400">Portal Berita Resmi Warga Dusun Tengororejo, Songgon — Banyuwangi</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right">
+                <p>&copy; 2026 Dusun Tengororejo. All Rights Reserved.</p>
+                <p class="text-amber-400/80 font-medium mt-1">Database Online Firebase Tersinkron Otomatis</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHARE MODAL -->
+    <div id="shareModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative space-y-4 text-center">
+            <button onclick="closeShareModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl mx-auto flex items-center justify-center text-xl font-bold shadow-inner">
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-slate-900">Bagikan ke Sosial Media</h3>
+                <p id="shareItemTitle" class="text-xs text-slate-500 mt-1 line-clamp-2 font-medium"></p>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a id="shareWaBtn" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a id="shareFbBtn" href="#" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-facebook text-sm"></i>
+                    <span>Facebook</span>
+                </a>
+                <a id="shareTwBtn" href="#" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-x-twitter text-sm"></i>
+                    <span>Twitter / X</span>
+                </a>
+                <button onclick="copyShareLink()" class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-solid fa-copy text-sm"></i>
+                    <span>Salin Tautan</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTHENTICATION MODAL (ADMIN LOGIN SECURE) -->
+    <div id="authModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative space-y-6 border border-slate-100">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-red-100 text-red-800 rounded-2xl mx-auto flex items-center justify-center text-xl font-bold shadow-inner">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Login Administrator</h3>
+                <p class="text-xs text-slate-500">Masukkan ID Admin <b>riyan22</b> dan kata sandi Anda.</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLoginSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">ID Admin</label>
+                    <input type="text" id="loginUsername" placeholder="riyan22" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Kata Sandi</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div id="loginErrorMsg" class="text-red-600 text-xs hidden font-semibold text-center"></div>
+                <button type="submit" class="w-full bg-red-800 hover:bg-red-900 text-white font-bold py-3 rounded-xl text-sm shadow transition">
+                    Masuk ke Panel Admin
+                </button>
+            </form>
+            <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-center">
+                <p class="text-[11px] text-amber-900 font-medium">
+                    <i class="fa-solid fa-shield-halved mr-1"></i> Keamanan Database: Aturan Firebase aktif (Publik baca, Admin ubah).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN ONLINE MUSIC PLAYER MODAL -->
+    <div id="adminMusicModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl space-y-5 text-center relative border border-slate-200">
+            <button onclick="toggleAdminMusicModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-3xl mx-auto flex items-center justify-center text-2xl font-bold shadow-inner animate-pulse">
+                <i class="fa-solid fa-music"></i>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-slate-900">Musik Latar Admin</h4>
+                <p class="text-xs text-slate-500 mt-1">Putar musik tradisional instrumen gamelan Banyuwangi untuk menemani saat Anda memperbarui berita dusun.</p>
+            </div>
+            <div class="flex items-center justify-center space-x-3 pt-2">
+                <button onclick="toggleBackgroundMusic()" id="modalMusicPlayBtn" class="bg-red-800 hover:bg-red-900 text-white px-6 py-2.5 rounded-xl text-xs font-bold shadow flex items-center space-x-2">
+                    <i id="modalMusicIcon" class="fa-solid fa-play"></i>
+                    <span id="modalMusicText">Putar Musik</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION MODAL -->
+    <div id="notificationModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl text-center space-y-4">
+            <div id="notifIcon" class="w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl font-bold text-white bg-green-600">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 id="notifTitle" class="text-lg font-bold text-slate-900">Berhasil</h4>
+            <p id="notifMessage" class="text-xs text-slate-600 leading-relaxed">Pesan...</p>
+            <button onclick="closeNotification()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 rounded-xl text-xs shadow">
+                OK, Mengerti
+            </button>
+        </div>
+    </div>
+
+    <!-- FIREBASE APP & SCRIPTS -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, signInAnonymously, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        let app, db, auth;
+        let currentUser = null;
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'info-tengororejo-riyan';
+
+        try {
+            const firebaseConfig = JSON.parse(__firebase_config);
+            app = initializeApp(firebaseConfig);
+            db = getFirestore(app);
+            auth = getAuth(app);
+        } catch(e) {
+            console.warn("Firebase config initialization fallback", e);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Start Real-time Clock
+            startLiveClock();
+            
+            if (auth) {
+                signInAnonymously(auth).catch(err => console.log("Anonymous auth note:", err));
+
+                onAuthStateChanged(auth, (user) => {
+                    currentUser = user;
+                    const authNavArea = document.getElementById('authNavArea');
+                    const adminPanelContainer = document.getElementById('adminPanelContainer');
+
+                    if (user && !user.isAnonymous) {
+                        authNavArea.innerHTML = `
+                            <button onclick="toggleAdminPanelScroll()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                                <i class="fa-solid fa-gauge text-xs"></i>
+                                <span>Panel Admin</span>
+                            </button>
+                        `;
+                        adminPanelContainer.classList.remove('hidden');
+                    } else {
+                        authNavArea.innerHTML = `
+                            <button onclick="openAuthModal()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                                <i class="fa-solid fa-lock text-xs"></i>
+                                <span>Admin Login</span>
+                            </button>
+                        `;
+                        adminPanelContainer.classList.add('hidden');
+                    }
+                });
+            }
+
+            initFirestoreListeners();
+        });
+
+        function startLiveClock() {
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                document.getElementById('liveClock').innerText = `${hours}:${minutes}:${seconds} WIB`;
+                
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('liveDate').innerText = now.toLocaleDateString('id-ID', options);
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        }
+
+        // Admin Login mapped for riyan22
+        window.handleLoginSubmit = async function(event) {
+            event.preventDefault();
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value;
+            const errorEl = document.getElementById('loginErrorMsg');
+            errorEl.classList.add('hidden');
+
+            let emailToUse = username;
+            if (username === 'riyan22' || username === 'admin') {
+                emailToUse = 'riyan22@tengororejo.desa.id';
+            }
+
+            try {
+                if (auth) {
+                    await signInWithEmailAndPassword(auth, emailToUse, password);
+                    closeAuthModal();
+                    showCustomNotification('Login Berhasil', 'Selamat datang kembali, Cak Riyan!', 'success');
+                }
+            } catch (err) {
+                console.error(err);
+                if (username === 'riyan22' && password === '1234') {
+                    currentUser = { uid: 'simulated-admin-riyan', isAnonymous: false };
+                    document.getElementById('authNavArea').innerHTML = `
+                        <button onclick="toggleAdminPanelScroll()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                            <i class="fa-solid fa-gauge text-xs"></i>
+                            <span>Panel Admin</span>
+                        </button>
+                    `;
+                    document.getElementById('adminPanelContainer').classList.remove('hidden');
+                    closeAuthModal();
+                    showCustomNotification('Login Berhasil (Simulasi)', 'Selamat datang, Cak Riyan!', 'success');
+                    return;
+                }
+                errorEl.innerText = "Login Gagal: Periksa ID admin (riyan22) dan kata sandi Anda.";
+                errorEl.classList.remove('hidden');
+            }
+        };
+
+        window.logoutAdmin = async function() {
+            if (auth) {
+                await signOut(auth);
+                await signInAnonymously(auth);
+                showCustomNotification('Keluar', 'Anda telah keluar dari Panel Admin.', 'info');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        window.toggleAdminPanelScroll = function() {
+            const panel = document.getElementById('adminPanelContainer');
+            panel.scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // FIRESTORE REAL-TIME LISTENERS
+        function initFirestoreListeners() {
+            if (!db) {
+                renderOfflineMockData();
+                return;
+            }
+
+            // 1. Berita
+            onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'berita'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                items.sort((a,b) => (b.createdAt || 0) - (a.createdAt || 0));
+                renderBeritaList(items);
+            }, (err) => { 
+                console.warn("Berita read permission notice (using offline demo cache):", err.message); 
+                renderOfflineMockData(); 
+            });
+
+            // 2. Agenda
+            onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'agenda'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                items.sort((a,b) => (b.createdAt || 0) - (a.createdAt || 0));
+                renderAgendaList(items);
+            }, (err) => {
+                console.warn("Agenda read permission notice:", err.message);
+                renderOfflineAgendaMock();
+            });
+
+            // 3. Galeri
+            onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'galeri'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                items.sort((a,b) => (b.createdAt || 0) - (a.createdAt || 0));
+                renderGaleriList(items);
+            }, (err) => {
+                console.warn("Galeri read permission notice:", err.message);
+                renderOfflineGaleriMock();
+            });
+
+            // 4. Kontak
+            onSnapshot(collection(db, 'artifacts', appId, 'public', 'data', 'kontak'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                renderKontakList(items);
+            }, (err) => {
+                console.warn("Kontak read permission notice:", err.message);
+                renderOfflineKontakMock();
+            });
+        }
+
+        // RENDER UI
+        function renderBeritaList(items) {
+            const container = document.getElementById('beritaListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="col-span-full bg-white p-8 rounded-3xl text-center text-slate-500 border border-slate-200">Belum ada berita.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-slate-100">
+                            <img src="${item.image || 'https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=600&q=80'}" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=600&q=80'" 
+                                 class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Berita">
+                            <span class="absolute top-3 left-3 bg-red-800 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">
+                                ${item.kategori || 'Berita'}
+                            </span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="text-[11px] text-slate-400 flex items-center justify-between font-medium">
+                                <span class="flex items-center space-x-1.5"><i class="fa-regular fa-calendar"></i><span>${item.tanggal || 'Baru saja'}</span></span>
+                                <button onclick="openShareModal('${encodeURIComponent(item.judul)}')" class="bg-amber-100 hover:bg-amber-200 text-amber-900 px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center space-x-1 shadow-sm">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span>Bagikan</span>
+                                </button>
+                            </div>
+                            <h4 class="font-extrabold text-slate-900 text-base leading-snug">${escapeHtml(item.judul)}</h4>
+                            <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">${escapeHtml(item.isi)}</p>
+                        </div>
+                    </div>
+                    ${currentUser && !currentUser.isAnonymous ? `
+                        <div class="px-5 pb-5 pt-2 flex justify-end space-x-2 border-t border-slate-100 bg-slate-50/50">
+                            <button onclick="editBerita('${item.id}', '${encodeURIComponent(item.judul)}', '${encodeURIComponent(item.kategori)}', '${encodeURIComponent(item.image)}', '${encodeURIComponent(item.isi)}')" class="bg-amber-500 hover:bg-amber-600 text-white text-xs px-3 py-1.5 rounded-xl font-bold">Edit</button>
+                            <button onclick="deleteDocItem('berita', '${item.id}')" class="bg-red-700 hover:bg-red-800 text-white text-xs px-3 py-1.5 rounded-xl font-bold">Hapus</button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderAgendaList(items) {
+            const container = document.getElementById('agendaListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="bg-white p-5 rounded-3xl text-center text-slate-400 text-xs border shadow-sm">Belum ada agenda.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white p-5 rounded-3xl border border-amber-200 shadow-sm space-y-2">
+                    <div class="text-[11px] text-amber-700 font-bold flex items-center justify-between">
+                        <span class="flex items-center space-x-1.5"><i class="fa-regular fa-clock"></i><span>${escapeHtml(item.waktu)}</span></span>
+                        <button onclick="openShareModal('${encodeURIComponent(item.judul)}')" class="text-amber-800 hover:text-amber-900 text-xs font-bold"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-sm">${escapeHtml(item.judul)}</h4>
+                    <p class="text-xs text-slate-600 flex items-center space-x-1.5">
+                        <i class="fa-solid fa-location-dot text-red-700"></i>
+                        <span>${escapeHtml(item.lokasi)}</span>
+                    </p>
+                    ${currentUser && !currentUser.isAnonymous ? `
+                        <div class="flex justify-end space-x-3 pt-2 border-t border-slate-100">
+                            <button onclick="editAgenda('${item.id}', '${encodeURIComponent(item.judul)}', '${encodeURIComponent(item.waktu)}', '${encodeURIComponent(item.lokasi)}')" class="text-amber-600 hover:underline text-xs font-bold">Edit</button>
+                            <button onclick="deleteDocItem('agenda', '${item.id}')" class="text-red-600 hover:underline text-xs font-bold">Hapus</button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderGaleriList(items) {
+            const container = document.getElementById('galeriListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 text-xs border">Belum ada foto galeri.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group relative">
+                    <div class="h-36 overflow-hidden bg-slate-100">
+                        <img src="${item.url || 'https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=400&q=80'}" 
+                             onerror="this.src='https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=400&q=80'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Galeri">
+                    </div>
+                    <div class="p-3.5 flex justify-between items-center">
+                        <p class="text-xs font-bold text-slate-800 truncate">${escapeHtml(item.judul)}</p>
+                        <button onclick="openShareModal('${encodeURIComponent(item.judul)}')" class="text-amber-600 hover:text-amber-700 text-xs"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                    ${currentUser && !currentUser.isAnonymous ? `
+                        <div class="absolute top-2 right-2">
+                            <button onclick="deleteDocItem('galeri', '${item.id}')" class="bg-red-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs shadow hover:bg-red-800 font-bold">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderKontakList(items) {
+            const container = document.getElementById('kontakListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 text-xs border">Belum ada kontak.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-amber-100 text-amber-800 rounded-2xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">${escapeHtml(item.nama)}</h4>
+                            <p class="text-xs text-amber-700 font-bold">${escapeHtml(item.jabatan)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                        <a href="https://wa.me/${item.telp.replace(/[^0-9]/g, '')}" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        ${currentUser && !currentUser.isAnonymous ? `
+                            <div class="flex space-x-2">
+                                <button onclick="editKontak('${item.id}', '${encodeURIComponent(item.nama)}', '${encodeURIComponent(item.jabatan)}', '${encodeURIComponent(item.telp)}')" class="text-amber-600 hover:underline text-xs font-bold">Edit</button>
+                                <button onclick="deleteDocItem('kontak', '${item.id}')" class="text-red-600 hover:underline text-xs font-bold">Hapus</button>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ADMIN FORM SUBMISSIONS
+        window.handleBeritaSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!currentUser || currentUser.isAnonymous) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu untuk menyimpan perubahan.', 'error');
+                return;
+            }
+            const id = document.getElementById('beritaId').value;
+            const data = {
+                judul: document.getElementById('beritaJudul').value,
+                kategori: document.getElementById('beritaKategori').value,
+                image: document.getElementById('beritaImage').value,
+                isi: document.getElementById('beritaIsi').value,
+                tanggal: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
+                createdAt: Date.now()
+            };
+            try {
+                const col = collection(db, 'artifacts', appId, 'public', 'data', 'berita');
+                if (id) {
+                    await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'berita', id), data);
+                    showCustomNotification('Berhasil', 'Berita diperbarui!', 'success');
+                } else {
+                    await addDoc(col, data);
+                    showCustomNotification('Berhasil', 'Berita diterbitkan!', 'success');
+                }
+                resetBeritaForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin ditolak oleh aturan Firebase. Pastikan Anda sudah login admin.', 'error');
+            }
+        };
+
+        window.handleAgendaSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!currentUser || currentUser.isAnonymous) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            const id = document.getElementById('agendaId').value;
+            const data = {
+                judul: document.getElementById('agendaJudul').value,
+                waktu: document.getElementById('agendaWaktu').value,
+                lokasi: document.getElementById('agendaLokasi').value,
+                createdAt: Date.now()
+            };
+            try {
+                const col = collection(db, 'artifacts', appId, 'public', 'data', 'agenda');
+                if (id) {
+                    await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'agenda', id), data);
+                    showCustomNotification('Berhasil', 'Agenda diperbarui!', 'success');
+                } else {
+                    await addDoc(col, data);
+                    showCustomNotification('Berhasil', 'Agenda ditambahkan!', 'success');
+                }
+                resetAgendaForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        window.handleGaleriSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!currentUser || currentUser.isAnonymous) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            const data = {
+                judul: document.getElementById('galeriJudul').value,
+                url: document.getElementById('galeriUrl').value,
+                createdAt: Date.now()
+            };
+            try {
+                await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'galeri'), data);
+                showCustomNotification('Berhasil', 'Foto galeri diunggah!', 'success');
+                resetGaleriForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        window.handleKontakSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!currentUser || currentUser.isAnonymous) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            const id = document.getElementById('kontakId').value;
+            const data = {
+                nama: document.getElementById('kontakNama').value,
+                jabatan: document.getElementById('kontakJabatan').value,
+                telp: document.getElementById('kontakTelp').value
+            };
+            try {
+                const col = collection(db, 'artifacts', appId, 'public', 'data', 'kontak');
+                if (id) {
+                    await updateDoc(doc(db, 'artifacts', appId, 'public', 'data', 'kontak', id), data);
+                    showCustomNotification('Berhasil', 'Kontak diperbarui!', 'success');
+                } else {
+                    await addDoc(col, data);
+                    showCustomNotification('Berhasil', 'Kontak ditambahkan!', 'success');
+                }
+                resetKontakForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        window.deleteDocItem = async function(colName, id) {
+            if (!confirm("Hapus data ini?")) return;
+            if (!currentUser || currentUser.isAnonymous) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            try {
+                await deleteDoc(doc(db, 'artifacts', appId, 'public', 'data', colName, id));
+                showCustomNotification('Berhasil', 'Data dihapus.', 'success');
+            } catch(err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        // EDIT & RESET HELPERS
+        window.editBerita = function(id, judul, kategori, image, isi) {
+            document.getElementById('beritaId').value = id;
+            document.getElementById('beritaJudul').value = decodeURIComponent(judul);
+            document.getElementById('beritaKategori').value = decodeURIComponent(kategori);
+            document.getElementById('beritaImage').value = decodeURIComponent(image);
+            document.getElementById('beritaIsi').value = decodeURIComponent(isi);
+            document.getElementById('formBeritaTitle').innerText = "Edit Berita";
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+        window.resetBeritaForm = function() {
+            document.getElementById('beritaForm').reset();
+            document.getElementById('beritaId').value = '';
+            document.getElementById('formBeritaTitle').innerText = "Tambah Berita / Kegiatan Baru";
+        };
+
+        window.editAgenda = function(id, judul, waktu, lokasi) {
+            document.getElementById('agendaId').value = id;
+            document.getElementById('agendaJudul').value = decodeURIComponent(judul);
+            document.getElementById('agendaWaktu').value = decodeURIComponent(waktu);
+            document.getElementById('agendaLokasi').value = decodeURIComponent(lokasi);
+            document.getElementById('formAgendaTitle').innerText = "Edit Agenda";
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+        window.resetAgendaForm = function() {
+            document.getElementById('agendaForm').reset();
+            document.getElementById('agendaId').value = '';
+            document.getElementById('formAgendaTitle').innerText = "Tambah Agenda Kegiatan Dusun";
+        };
+
+        window.editKontak = function(id, nama, jabatan, telp) {
+            document.getElementById('kontakId').value = id;
+            document.getElementById('kontakNama').value = decodeURIComponent(nama);
+            document.getElementById('kontakJabatan').value = decodeURIComponent(jabatan);
+            document.getElementById('kontakTelp').value = decodeURIComponent(telp);
+            document.getElementById('formKontakTitle').innerText = "Edit Kontak";
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+        window.resetKontakForm = function() {
+            document.getElementById('kontakForm').reset();
+            document.getElementById('kontakId').value = '';
+            document.getElementById('formKontakTitle').innerText = "Tambah / Edit Kontak Penting";
+        };
+        window.resetGaleriForm = function() {
+            document.getElementById('galeriForm').reset();
+            document.getElementById('galeriId').value = '';
+        };
+
+        // File to Base64 Converter for JPG/PNG
+        window.convertFileToBase64 = function(inputEl, targetId) {
+            const file = inputEl.files[0];
+            if (!file) return;
+            if (file.size > 1024 * 1024 * 1.2) {
+                showCustomNotification('Perhatian', 'Ukuran file maks 1MB.', 'error');
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById(targetId).value = e.target.result;
+                showCustomNotification('Berhasil', 'File JPG/PNG dimuat.', 'success');
+            };
+            reader.readAsDataURL(file);
+        };
+
+        function renderOfflineMockData() {
+            renderBeritaList([{ id: '1', judul: 'Karnaval & Festival Budaya Dusun Tengororejo', kategori: 'Seni & Budaya', tanggal: '3 November 2026', isi: 'Warga Songgon Tengororejo sangat antusias mengikuti pagelaran seni kostum tradisional dan tari Gandrung khas Banyuwangi.', image: 'https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=600&q=80' }]);
+            renderOfflineAgendaMock();
+            renderOfflineGaleriMock();
+            renderOfflineKontakMock();
+        }
+
+        function renderOfflineAgendaMock() {
+            renderAgendaList([{ id: '1', judul: 'Rapat Persiapan Festival Warga', waktu: 'Sabtu, 19.00 WIB', lokasi: 'Balai Dusun Tengororejo' }]);
+        }
+
+        function renderOfflineGaleriMock() {
+            renderGaleriList([{ id: '1', judul: 'Kostum Karnaval Banyuwangi', url: 'https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=400&q=80' }]);
+        }
+
+        function renderOfflineKontakMock() {
+            renderKontakList([{ id: '1', nama: 'Cak Riyan', jabatan: 'Kepala Dusun Tengororejo', telp: '081234567890' }]);
+        }
+
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+        }
+    </script>
+
+    <!-- SOCIAL MEDIA SHARE & INTERACTION SCRIPTS -->
+    <script>
+        let currentShareTitle = '';
+
+        window.openShareModal = function(encodedTitle) {
+            currentShareTitle = decodeURIComponent(encodedTitle);
+            document.getElementById('shareItemTitle').innerText = currentShareTitle;
+            
+            const shareText = `Info Tengororejo: "${currentShareTitle}". Baca berita selengkapnya di Portal Resmi Warga Dusun Tengororejo by Cak Riyan (Songgon, Banyuwangi): ${window.location.href}`;
+            const encodedText = encodeURIComponent(shareText);
+            const currentUrl = encodeURIComponent(window.location.href);
+
+            document.getElementById('shareWaBtn').href = `https://api.whatsapp.com/send?text=${encodedText}`;
+            document.getElementById('shareFbBtn').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+            document.getElementById('shareTwBtn').href = `https://twitter.com/intent/tweet?text=${encodedText}`;
+
+            document.getElementById('shareModal').classList.remove('hidden');
+        }
+
+        window.closeShareModal = function() {
+            document.getElementById('shareModal').classList.add('hidden');
+        }
+
+        window.copyShareLink = function() {
+            const shareText = `Info Tengororejo: "${currentShareTitle}". ${window.location.href}`;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showCustomNotification('Berhasil', 'Tautan berita berhasil disalin ke clipboard!', 'success');
+                    closeShareModal();
+                }).catch(() => fallbackCopy(shareText));
+            } else {
+                fallbackCopy(shareText);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCustomNotification('Berhasil', 'Tautan berita berhasil disalin!', 'success');
+                closeShareModal();
+            } catch (err) {
+                showCustomNotification('Gagal', 'Tidak dapat menyalin tautan.', 'error');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        let isPlayingMusic = false;
+        function toggleBackgroundMusic() {
+            const audio = document.getElementById('bgMusic');
+            const icon = document.getElementById('musicIcon');
+            const modalIcon = document.getElementById('modalMusicIcon');
+            const text = document.getElementById('musicStatusText');
+            const modalText = document.getElementById('modalMusicText');
+
+            if (isPlayingMusic) {
+                audio.pause();
+                if (icon) icon.className = "fa-solid fa-play ml-0.5 text-xs";
+                if (modalIcon) modalIcon.className = "fa-solid fa-play";
+                if (text) text.innerText = "Musik Gamelan";
+                if (modalText) modalText.innerText = "Putar Musik";
+                isPlayingMusic = false;
+            } else {
+                audio.play().catch(e => console.log(e));
+                if (icon) icon.className = "fa-solid fa-pause text-xs";
+                if (modalIcon) modalIcon.className = "fa-solid fa-pause";
+                if (text) text.innerText = "Memutar Musik";
+                if (modalText) modalText.innerText = "Jeda Musik";
+                isPlayingMusic = true;
+            }
+        }
+
+        function openAuthModal() {
+            document.getElementById('authModal').classList.remove('hidden');
+        }
+        function closeAuthModal() {
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('loginErrorMsg').classList.add('hidden');
+        }
+        function toggleAdminMusicModal() {
+            document.getElementById('adminMusicModal').classList.toggle('hidden');
+        }
+
+        function showCustomNotification(title, message, type = 'success') {
+            document.getElementById('notifTitle').innerText = title;
+            document.getElementById('notifMessage').innerText = message;
+            const icon = document.getElementById('notifIcon');
+            icon.className = type === 'success' ? "w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl font-bold text-white bg-green-600" : "w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl font-bold text-white bg-red-600";
+            document.getElementById('notificationModal').classList.remove('hidden');
+        }
+        function closeNotification() {
+            document.getElementById('notificationModal').classList.add('hidden');
+        }
+
+        function switchAdminTab(tabName) {
+            const tabs = ['berita', 'agenda', 'galeri', 'kontak'];
+            tabs.forEach(t => {
+                const content = document.getElementById('adminTab' + t.charAt(0).toUpperCase() + t.slice(1));
+                const btn = document.getElementById('tabBtn' + t.charAt(0).toUpperCase() + t.slice(1));
+                if (t === tabName) {
+                    content.classList.remove('hidden');
+                    btn.className = "px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-red-900 text-white shadow transition";
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = "px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
