@@ -1,92 +1,1204 @@
+<!-- ...ရှင် -->
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#059669"><meta name="description" content="ENGKRES JEK - Ojek, antar belanja dan kurir Banyuwangi">
-<title>ENGKRES JEK — Ojek & Kurir Banyuwangi</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--brand:#059669;--dark:#047857;--txt:#1f2937;--muted:#6b7280;--line:#e5e7eb;--bg:#f3f4f6}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}img{max-width:100%;object-fit:cover}.hidden{display:none!important}.wrap{max-width:580px;margin:auto;padding:0 15px}.top{background:var(--brand);color:white;position:sticky;top:0;z-index:20;box-shadow:0 2px 12px #0002}.top-inner{min-height:76px;display:flex;align-items:center;gap:12px;padding:12px 15px}.logo{width:46px;height:46px;border-radius:50%;background:#fff;object-fit:cover;border:2px solid #fff}.brand{min-width:0;flex:1}.brand b{font-size:19px;font-weight:800;line-height:1.1}.brand small{display:block;margin-top:4px;font-size:11px;color:#e0f2f1;white-space:nowrap}.nav{border:0;border-radius:9px;padding:10px 12px;white-space:nowrap;font-weight:700;font-size:12px}.nav.white{background:white;color:var(--dark)}.nav.dark{background:var(--dark);color:white}.banner{color:#fff;background:linear-gradient(100deg,#16a34a,#0d9488);height:45px;overflow:hidden;position:relative;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-weight:700;font-size:11px}.motor{position:absolute;left:-120px;bottom:3px;animation:move 13s linear infinite;font-size:22px}@keyframes move{to{transform:translateX(calc(100vw + 160px))}}main{padding-top:17px;padding-bottom:50px}section.card{background:white;padding:18px;margin-bottom:19px;border-radius:20px;box-shadow:0 1px 3px #1111}.muted{color:var(--muted)}.small{font-size:11px}.hint{font-size:11px;color:var(--muted);margin-top:5px}.sect-title{font-weight:800;font-size:17px;margin:0 0 15px}.pills{display:flex;gap:8px;margin-bottom:16px}.pill{flex:1;border:1px solid var(--line);background:#f9fafb;border-radius:11px;padding:13px 4px;color:#334155;font-weight:700;font-size:12px;white-space:nowrap}.pill.active{background:var(--brand);color:white;border-color:var(--brand)}label{display:block;font-weight:700;font-size:12px;margin-bottom:7px;color:#374151}.field{width:100%;padding:13px 14px;border:1px solid #d1d5db;border-radius:13px;background:#f9fafb;outline:none;min-width:0;color:#1f2937}.field:focus{border-color:var(--brand);box-shadow:0 0 0 3px #10b98122}.gap{display:grid;gap:13px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:13px}.fare{padding:13px 10px;border:1px solid #a7f3d0;border-radius:13px;background:#ecfdf5;font-weight:800;font-size:19px;color:var(--dark);min-height:48px}.section-rule{height:1px;background:var(--line);margin:20px 0}.right{float:right;color:var(--brand);font-size:11px}.drivers{max-height:285px;overflow-y:auto;display:grid;gap:10px;margin:12px 0}.item{border:1px solid var(--line);border-radius:15px;padding:12px;display:flex;align-items:center;gap:11px;background:#fff}.item.selected{border:1.5px solid var(--brand);background:#f0fdf4}.photo{height:49px;width:49px;flex-shrink:0;border-radius:50%;background:#e5e7eb}.photo.shop{border-radius:12px;width:58px;height:58px}.item .details{flex:1;min-width:0}.item .details b{font-weight:800;display:block;overflow-wrap:anywhere}.item .details span{font-size:11px;color:var(--muted);line-height:1.6}.check{display:grid;place-items:center;border:2px solid #cbd5e1;color:#cbd5e1;border-radius:50%;width:24px;height:24px}.item.selected .check{background:var(--brand);border-color:var(--brand);color:white}.tag{display:inline-block;border-radius:15px;background:#d1fae5;color:#047857;padding:2px 7px;font-size:10px;font-weight:700;margin-top:4px}.tag.busy{background:#fef3c7;color:#92400e}.tag.off{background:#fee2e2;color:#991b1b}.primary{background:var(--brand);color:#fff;font-weight:800;border:0;border-radius:13px;padding:14px 18px}.primary.full{width:100%;font-size:17px;margin-top:16px;box-shadow:0 5px 12px #05966936}.outline{border:1px solid #a7f3d0;color:var(--dark);font-weight:700;background:white;border-radius:10px;padding:9px 12px}.danger{background:#ef4444;color:#fff;border:0;border-radius:9px;padding:8px 10px}.micro{font-size:11px;padding:7px 10px}footer{text-align:center;font-size:11px;color:#6b7280;padding:18px 5px;background:white}footer b{display:block;color:var(--dark);margin-bottom:3px}.notice{background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;border-radius:12px;padding:12px;font-size:12px;line-height:1.5;margin-bottom:15px}.notice.warn{background:#fffbeb;border-color:#fde68a;color:#92400e}.modal{position:fixed;inset:0;z-index:50;background:#0009;display:flex;align-items:center;justify-content:center;padding:12px}.dialog{background:white;border-radius:19px;width:min(100%,580px);max-height:calc(100dvh - 24px);overflow-y:auto;padding:18px 20px}.dialog-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}.dialog-head h2{font-size:18px;margin:0}.close{background:#f3f4f6;border:0;border-radius:8px;padding:7px 11px}.admin-grid{display:grid;gap:13px}.admin-row{display:flex;gap:8px;align-items:center;justify-content:space-between;border-bottom:1px solid #e5e7eb;padding:10px 0}.admin-row img{width:40px;height:40px;border-radius:10px}.admin-row .desc{flex:1;min-width:0;overflow-wrap:anywhere}.btnrow{display:flex;flex-wrap:wrap;gap:8px}.admin-sub{margin:17px 0 9px;border-bottom:1px solid var(--line);padding-bottom:9px;font-size:14px;font-weight:800}.status{margin:10px 0;background:#fff;border:1px solid var(--line);padding:9px 12px;border-radius:11px;color:var(--muted);font-size:11px}.status.online{border-color:#a7f3d0;color:#047857;background:#ecfdf5}.status.bad{color:#b91c1c;background:#fef2f2}.foot-actions{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}.split{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}.empty{padding:25px 8px;text-align:center;color:#6b7280;font-size:12px;background:#f9fafb;border:1px dashed #d1d5db;border-radius:13px}.thumb{height:55px;width:55px;border-radius:12px;background:#e5e7eb;object-fit:cover}.preview{max-height:80px;max-width:120px;border-radius:12px}.money{color:var(--dark);font-weight:800}#sync-status{font-size:11px;padding:4px 0 0}@media(min-width:650px){.top-inner{max-width:700px;margin:auto}.banner{justify-content:center;gap:140px}.wrap{max-width:610px}.motor{animation-duration:17s}}@media(max-width:380px){.brand b{font-size:16px}.brand small{font-size:10px}.nav{padding:9px 8px;font-size:11px}.top-inner{gap:6px}.logo{width:38px;height:38px}section.card{padding:14px}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Tengororejo by Cak Riyan</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#991b1b', 
+                        secondary: '#d97706', 
+                        dark: '#1f2937'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes gandrungDance {
+            0%, 100% { transform: translateY(0) rotate(0deg) scale(1); }
+            25% { transform: translateY(-8px) rotate(-2deg) scale(1.02); }
+            75% { transform: translateY(-4px) rotate(2deg) scale(1.02); }
+        }
+        .animate-gandrung {
+            animation: gandrungDance 3.5s ease-in-out infinite;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+    </style>
 </head>
-<body>
-<header class="top"><div class="top-inner"><img id="header-logo" class="logo" alt="Logo ENGKRES JEK"><div class="brand"><b>ENGKRES JEK</b><small>Banyuwangi Ojek &amp; Kurir</small></div><button class="nav white" id="customer-tab">Pelanggan</button><button class="nav dark" id="admin-tab">♢ Admin</button></div></header>
-<div class="banner"><span>⚡ Cepat &amp; Aman</span><span>LAYANAN 24 JAM</span><span class="motor" aria-hidden="true">🛵💨</span></div>
-<main class="wrap">
-<div id="sync-status" class="status">Menghubungkan ke database online…</div>
-<section class="card"><h2 class="sect-title">Pesan Layanan ENGKRES JEK</h2>
-<div class="pills"><button class="pill active" data-service="ride">🛵 Ojek</button><button class="pill" data-service="food">🛍️ Belanja</button><button class="pill" data-service="kurir">📦 Kurir</button></div>
-<div class="gap"><div><label for="order-name">Nama Pemesan</label><input class="field" id="order-name" placeholder="Nama lengkap Anda" maxlength="100"></div><div id="service-fields" class="gap"></div>
-<div class="twocol"><div><label for="order-distance">Jarak Perkiraan (KM)</label><input type="number" min="1" max="100" step="1" value="1" class="field" id="order-distance"></div><div><label>Total Tarif</label><div class="fare" id="fare-display">Rp 8.000</div></div></div></div>
-<div class="section-rule"></div><div><b>Pilih Driver Kesayangan Anda</b><span class="right">Ketuk untuk memilih</span></div><div class="drivers" id="customer-driver-list"></div>
-<button id="wa-order" class="primary full">☏ Pesan via WhatsApp Admin</button><p class="hint">Tarif ongkos perjalanan; harga produk/belanja di luar ongkos, kecuali disepakati admin.</p>
-</section>
-<section class="card"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><h2 class="sect-title" style="margin:0">🏪 UMKM Kuliner Banyuwangi</h2><span class="small muted">Pilih menu favorit</span></div><div id="customer-umkm-list" class="gap" style="margin-top:15px"></div></section>
-</main>
-<footer><b>ENGKRES JEK BANYUWANGI</b>Aplikasi by Cak Riyan</footer>
-<div id="admin-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="dialog"><div class="dialog-head"><h2 id="modal-title">Admin ENGKRES JEK</h2><button id="close-admin" class="close">✕</button></div>
-<div id="login-view"><p class="hint" style="font-size:12px;margin-bottom:15px">Login menggunakan akun Email/Password yang dibuat di Firebase Authentication.</p><div class="gap"><div><label for="login-email">Email Admin</label><input id="login-email" type="email" autocomplete="username" class="field" placeholder="admin@contoh.com"></div><div><label for="login-password">Password</label><input id="login-password" type="password" autocomplete="current-password" class="field" placeholder="Kata sandi Firebase"></div></div><button class="primary full" id="login-button">Masuk Admin</button><p class="hint" id="login-message"></p></div>
-<div id="admin-view" class="hidden">
-<div class="notice">✅ Perubahan disimpan di Cloud Firestore dan langsung tersinkron ke laptop dan HP pelanggan. <span id="admin-email"></span></div>
-<div class="admin-sub">Pengaturan Aplikasi</div><div class="gap">
-<div><label>WhatsApp Admin Utama</label><input class="field" id="admin-phone1" inputmode="tel" placeholder="628xxxxxxxxxx"></div><div><label>WhatsApp Admin Cadangan</label><input class="field" id="admin-phone2" inputmode="tel" placeholder="628xxxxxxxxxx"></div>
-<div><label>Logo ENGKRES JEK</label><input type="file" id="admin-logo" accept="image/png,image/jpeg,image/webp" class="field"><p class="hint">Gambar diperkecil otomatis agar hemat kuota.</p></div>
-<button id="save-settings" class="primary">Simpan Pengaturan & Logo</button></div>
-<div class="admin-sub">Driver <button class="outline micro" id="add-driver" style="float:right">+ Tambah Driver</button></div><div id="admin-drivers"></div>
-<div class="admin-sub">UMKM / Warung <button class="outline micro" id="add-umkm" style="float:right">+ Tambah UMKM</button></div><div id="admin-umkm"></div>
-<div class="admin-sub">Pindahkan Data Lama dari Laptop</div><div class="notice warn">Jalankan ini pada <b>laptop dan alamat website yang sebelumnya digunakan untuk mengedit</b>, supaya logo, foto, driver, dan UMKM yang tersimpan di browser lama dapat dipindahkan ke Firebase. Jangan hapus data browser sebelum berhasil.</div>
-<button id="import-legacy" class="outline">⬆ Impor data dari browser ini</button><p id="import-message" class="hint"></p>
-<div class="foot-actions"><button class="outline" id="logout">Keluar dari Admin</button></div></div></div></div>
-<div id="edit-modal" class="modal hidden" role="dialog" aria-modal="true"><div class="dialog"><div class="dialog-head"><h2 id="edit-title">Tambah</h2><button class="close" id="close-edit">✕</button></div><form id="record-form" class="gap"><input type="hidden" id="record-kind"><input type="hidden" id="record-id"><div><label>Nama</label><input class="field" id="record-name" maxlength="100" required></div><div id="driver-fields" class="gap"><div><label>Nomor Polisi</label><input class="field" id="record-plate" maxlength="50"></div><div class="twocol"><div><label>Rating (1-5)</label><input type="number" step=".1" min="1" max="5" class="field" id="record-rating" value="5"></div><div><label>Status Driver</label><select class="field" id="record-status"><option value="online">Online</option><option value="busy">Dalam pengantaran</option><option value="off">Off</option></select></div></div></div><div id="umkm-fields" class="gap hidden"><div><label>Menu / Produk</label><input class="field" id="record-menu" maxlength="160"></div><div class="twocol"><div><label>Harga (Rp)</label><input class="field" id="record-price" min="0" type="number"></div><div><label>Status Warung</label><select class="field" id="record-open"><option value="open">Buka</option><option value="closed">Tutup</option></select></div></div></div><div><label>Unggah Foto (opsional)</label><input id="record-photo" type="file" accept="image/png,image/jpeg,image/webp" class="field"><p class="hint">Jika sedang edit dan tidak memilih foto, foto lama dipertahankan.</p></div><div class="foot-actions"><button class="outline" id="cancel-edit" type="button">Batal</button><button class="primary" type="submit" id="save-record">Simpan ke Firebase</button></div></form></div></div>
-<script src="./firebase-config.js"></script>
-<script type="module">
-import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js';
-import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js';
-import {getFirestore,collection,doc,setDoc,addDoc,deleteDoc,onSnapshot,writeBatch,serverTimestamp} from 'https://www.gstatic.com/firebasejs/13.1.0/firebase-firestore.js';
-const $ = id=>document.getElementById(id); const q=sel=>document.querySelector(sel);
-const currency=n=>'Rp '+(Number(n)||0).toLocaleString('id-ID');
-const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fallbackLogo='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="50" fill="#059669"/><text x="50" y="55" font-size="12" text-anchor="middle" fill="white" font-family="sans-serif">ENGKRES</text></svg>');
-const placeholder=(label,bg='#d1fae5')=>'data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" rx="12" fill="${bg}"/><text x="50" y="54" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#065f46">${esc(label).slice(0,12)}</text></svg>`);
-const safeImg=(src,label)=>{if(typeof src==='string'&&(src.startsWith('data:image/jpeg;base64,')||src.startsWith('data:image/png;base64,')||src.startsWith('data:image/webp;base64,')||/^https:\/\//i.test(src)))return src;return placeholder(label)};
-let db=null,auth=null,authUser=null,isAdmin=false,drivers=[],shops=[],settings={},service='ride',selectedDriver='',selectedShop=null,initial={drivers:false,shops:false,settings:false};
-const collectionDrivers=()=>collection(db,'drivers'); const collectionShops=()=>collection(db,'umkm'); const settingRef=()=>doc(db,'app','public');
-function status(message,type=''){let el=$('sync-status');el.textContent=message;el.className='status '+type}
-function errorMessage(e){console.error(e);let code=e?.code||'unknown';return ({'auth/invalid-credential':'Email atau password salah.','auth/too-many-requests':'Terlalu banyak percobaan masuk. Coba lagi nanti.','permission-denied':'Akses Firebase ditolak. Periksa ADMIN_UID dan Firestore Rules.','unavailable':'Jaringan atau Firebase sedang tidak tersedia.'})[code]||`${e?.message||'Terjadi kesalahan'} (${code})`}
-function cleanPhone(v){let d=String(v||'').replace(/\D/g,'');if(d.startsWith('0'))d='62'+d.slice(1);if(d.startsWith('8'))d='62'+d;return d}
-function fare(){const km=Math.max(1,Math.ceil(Number($('order-distance').value)||1));return km<=1?8000:10000+Math.max(0,km-2)*2000}
-function updateFare(){$('fare-display').textContent=currency(fare())}
-function serviceFields(){let el=$('service-fields');let shared='class="field" maxlength="250"'; if(service==='ride')el.innerHTML=`<div><label>Lokasi Penjemputan</label><input id="pickup" ${shared} placeholder="Contoh: Songgon Banyuwangi"></div><div><label>Tujuan Pengantaran</label><input id="destination" ${shared} placeholder="Contoh: Taman Blambangan"></div>`;if(service==='food')el.innerHTML=`<div><label>Pesanan / Daftar Belanja</label><textarea class="field" id="order-items" rows="3" placeholder="Contoh: nasi tempong 2 porsi"></textarea></div><div><label>Alamat Pengiriman</label><input id="destination" ${shared} placeholder="Alamat lengkap penerima"></div>`;if(service==='kurir')el.innerHTML=`<div><label>Lokasi Ambil Paket</label><input id="pickup" ${shared} placeholder="Lokasi mengambil barang"></div><div><label>Tujuan & Nama Penerima</label><input id="destination" ${shared} placeholder="Nama dan alamat tujuan"></div>`;if(selectedShop&&service==='food'){$('order-items').value=`${selectedShop.name} - ${selectedShop.menu} (${currency(selectedShop.price)})`}}
-function setService(v){service=v;document.querySelectorAll('[data-service]').forEach(b=>b.classList.toggle('active',b.dataset.service===v));serviceFields()}
-document.querySelectorAll('[data-service]').forEach(b=>b.addEventListener('click',()=>setService(b.dataset.service)));
-$('order-distance').addEventListener('input',updateFare);
-function renderDrivers(){const el=$('customer-driver-list');const avail=drivers.filter(x=>x.status!=='off');if(!avail.some(x=>x.id===selectedDriver))selectedDriver=avail.find(x=>x.status==='online')?.id||'';el.innerHTML=drivers.length?drivers.map(d=>{const active=selectedDriver===d.id;const statusText=({online:'Online',busy:'Dalam pengantaran',off:'Off'})[d.status]||'Online';return `<button type="button" class="item ${active?'selected':''}" data-choose-driver="${esc(d.id)}" ${d.status==='off'?'disabled':''} style="text-align:left;width:100%"><img class="photo" src="${safeImg(d.photo,d.name)}" alt="Foto driver"><div class="details"><b>${esc(d.name)}</b><span>${esc(d.plate||'-')} · ⭐${Number(d.rating||5).toFixed(1)}</span><br><span class="tag ${d.status==='busy'?'busy':d.status==='off'?'off':''}">${statusText}</span></div><span class="check">${active?'✓':''}</span></button>`}).join(''):'<div class="empty">Belum ada driver online. Admin dapat menambahkan driver di dashboard.</div>';el.querySelectorAll('[data-choose-driver]').forEach(b=>b.onclick=()=>{const d=drivers.find(x=>x.id===b.dataset.chooseDriver);if(d&&d.status==='online'){selectedDriver=d.id;renderDrivers()}else alert('Driver sedang tidak tersedia. Pilih driver Online.')})}
-function renderShops(){const el=$('customer-umkm-list');el.innerHTML=shops.length?shops.map(s=>`<div class="item"><img class="photo shop" src="${safeImg(s.photo,s.name)}" alt="Foto UMKM"><div class="details"><b>${esc(s.name)}</b><span>${esc(s.menu||'-')}</span><br><span class="money">${currency(s.price)}</span><br><span class="tag ${s.open===false?'off':''}">${s.open===false?'Tutup':'Buka'}</span></div><button class="primary micro" data-choose-shop="${esc(s.id)}" ${s.open===false?'disabled':''}>Pilih</button></div>`).join(''):'<div class="empty">Katalog UMKM belum diisi admin.</div>';el.querySelectorAll('[data-choose-shop]').forEach(b=>b.onclick=()=>{selectedShop=shops.find(x=>x.id===b.dataset.chooseShop);setService('food');window.scrollTo({top:0,behavior:'smooth'})})}
-function renderSettings(){const logo=safeImg(settings.logo||fallbackLogo,'ENGKRES');$('header-logo').src=logo; if(isAdmin){$('admin-phone1').value=settings.phone1||'';$('admin-phone2').value=settings.phone2||''}}
-function renderAdminLists(){if(!isAdmin)return;const show=(list,kind,id)=>{const el=$(id);el.innerHTML=list.length?list.map(d=>`<div class="admin-row"><img src="${safeImg(d.photo,d.name)}" alt=""><div class="desc"><b>${esc(d.name)}</b><div class="hint">${kind==='drivers'?esc(d.plate)+' · '+({online:'Online',busy:'Dalam pengantaran',off:'Off'}[d.status]||'Online'):esc(d.menu)+' · '+currency(d.price)}</div></div><button class="outline micro" data-edit="${esc(d.id)}">Edit</button><button class="danger micro" data-delete="${esc(d.id)}">Hapus</button></div>`).join(''):'<div class="empty">Belum ada data.</div>';el.querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>openEdit(kind,b.dataset.edit));el.querySelectorAll('[data-delete]').forEach(b=>b.onclick=()=>removeRecord(kind,b.dataset.delete))};show(drivers,'drivers','admin-drivers');show(shops,'umkm','admin-umkm')}
-function submitOrder(){let name=$('order-name').value.trim(),dest=$('destination')?.value.trim(),d=drivers.find(x=>x.id===selectedDriver);if(!name||!dest){alert('Mohon isi nama pemesan dan alamat tujuan.');return}const phone=cleanPhone(settings.phone1||settings.phone2);if(!/^62\d{8,13}$/.test(phone)){alert('Nomor WhatsApp admin belum diatur. Hubungi pengelola ENGKRES JEK.');return}let parts=['Halo Admin ENGKRES JEK, saya ingin memesan:',`Nama: ${name}`,`Layanan: ${service==='ride'?'Ojek':service==='food'?'Belanja / UMKM':'Kurir'}`];if($('pickup'))parts.push('Penjemputan: '+($('pickup').value||'-'));if($('order-items'))parts.push('Kebutuhan: '+($('order-items').value||'-'));parts.push('Tujuan: '+dest,`Jarak: ${$('order-distance').value||1} km`,`Estimasi ongkos: ${currency(fare())}`,`Driver: ${d?d.name+' ('+d.plate+')':'Disesuaikan Admin'}`,'Mohon konfirmasi biaya dan ketersediaannya. Terima kasih.');window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(parts.join('\n')),'_blank','noopener,noreferrer')}
-$('wa-order').onclick=submitOrder;
-function openAdmin(){if(!auth){alert('Firebase belum dikonfigurasi. Ikuti PETUNJUK_SETUP.txt di paket.');return}$('admin-modal').classList.remove('hidden');renderAuth()}
-function renderAuth(){$('login-view').classList.toggle('hidden',isAdmin);$('admin-view').classList.toggle('hidden',!isAdmin);$('modal-title').textContent=isAdmin?'Dashboard Admin ENGKRES JEK':'Login Admin ENGKRES JEK';$('admin-email').textContent=isAdmin?'Akun: '+authUser.email:'';if(isAdmin){renderAdminLists();renderSettings()}}
-$('admin-tab').onclick=openAdmin;$('customer-tab').onclick=()=>{$('admin-modal').classList.add('hidden');window.scrollTo({top:0,behavior:'smooth'})};$('close-admin').onclick=()=>$('admin-modal').classList.add('hidden');$('admin-modal').addEventListener('click',e=>{if(e.target.id==='admin-modal')$('admin-modal').classList.add('hidden')});
-$('login-button').onclick=async()=>{if(!auth)return;const email=$('login-email').value.trim(),pwd=$('login-password').value;const btn=$('login-button');btn.disabled=true;$('login-message').textContent='Memeriksa akun…';try{await signInWithEmailAndPassword(auth,email,pwd);$('login-password').value='';$('login-message').textContent=''}catch(e){$('login-message').textContent=errorMessage(e)}finally{btn.disabled=false}};
-$('login-password').addEventListener('keydown',e=>{if(e.key==='Enter')$('login-button').click()});
-$('logout').onclick=async()=>{await signOut(auth);$('admin-modal').classList.add('hidden')};
-function assertAdmin(){if(!db||!isAdmin)throw new Error('Anda belum login sebagai Admin yang terdaftar.');}
-function fileToImage(file,max=500){return new Promise((resolve,reject)=>{if(!file){resolve(null);return}if(!file.type.startsWith('image/')){reject(new Error('Harap pilih gambar JPG, PNG, atau WEBP.'));return}const input=new FileReader();input.onerror=()=>reject(new Error('File gambar gagal dibaca.'));input.onload=()=>{const image=new Image();image.onerror=()=>reject(new Error('Gambar tidak dapat dibuka.'));image.onload=()=>{let width=image.width,height=image.height,scale=Math.min(1,max/Math.max(width,height));const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(width*scale));canvas.height=Math.max(1,Math.round(height*scale));canvas.getContext('2d').drawImage(image,0,0,canvas.width,canvas.height);const data=canvas.toDataURL('image/jpeg',.72);if(data.length>260000){reject(new Error('Foto terlalu besar setelah kompresi. Coba foto lebih kecil.'));return}resolve(data)};image.src=input.result};input.readAsDataURL(file)})}
-function compressExisting(data,max=400){if(typeof data!=='string'||!data.startsWith('data:image/'))return Promise.resolve(data);return new Promise(resolve=>{let im=new Image();im.onload=()=>{let sc=Math.min(1,max/Math.max(im.width,im.height));let cv=document.createElement('canvas');cv.width=Math.max(1,Math.round(im.width*sc));cv.height=Math.max(1,Math.round(im.height*sc));cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);resolve(cv.toDataURL('image/jpeg',.65))};im.onerror=()=>resolve('');im.src=data})}
-$('save-settings').onclick=async()=>{try{assertAdmin();let info={phone1:cleanPhone($('admin-phone1').value),phone2:cleanPhone($('admin-phone2').value),updatedAt:serverTimestamp()};const file=$('admin-logo').files[0];if(file)info.logo=await fileToImage(file,300);await setDoc(settingRef(),info,{merge:true});$('admin-logo').value='';alert('Pengaturan tersimpan online. Seluruh pelanggan akan melihat pembaruan.') }catch(e){alert(errorMessage(e))}};
-function openEdit(kind,id=''){let row=(kind==='drivers'?drivers:shops).find(x=>x.id===id);$('record-kind').value=kind;$('record-id').value=id;$('record-name').value=row?.name||'';$('record-photo').value='';$('driver-fields').classList.toggle('hidden',kind!=='drivers');$('umkm-fields').classList.toggle('hidden',kind==='drivers');$('record-plate').value=row?.plate||'';$('record-rating').value=row?.rating||5;$('record-status').value=row?.status||'online';$('record-menu').value=row?.menu||'';$('record-price').value=row?.price||0;$('record-open').value=row?.open===false?'closed':'open';$('edit-title').textContent=(id?'Edit ':'Tambah ')+(kind==='drivers'?'Driver':'UMKM');$('edit-modal').classList.remove('hidden')}
-$('add-driver').onclick=()=>openEdit('drivers');$('add-umkm').onclick=()=>openEdit('umkm');$('close-edit').onclick=()=>$('edit-modal').classList.add('hidden');$('cancel-edit').onclick=()=>$('edit-modal').classList.add('hidden');
-$('record-form').onsubmit=async e=>{e.preventDefault();const btn=$('save-record');btn.disabled=true;try{assertAdmin();const kind=$('record-kind').value,id=$('record-id').value,row=(kind==='drivers'?drivers:shops).find(x=>x.id===id),name=$('record-name').value.trim();if(!name)throw new Error('Nama harus diisi.');let data={name,updatedAt:serverTimestamp()};if(kind==='drivers'){if(!$('record-plate').value.trim())throw new Error('Nomor polisi harus diisi.');data={...data,plate:$('record-plate').value.trim(),rating:Math.max(1,Math.min(5,Number($('record-rating').value)||5)),status:$('record-status').value}}else{if(!$('record-menu').value.trim())throw new Error('Nama menu harus diisi.');data={...data,menu:$('record-menu').value.trim(),price:Math.max(0,Number($('record-price').value)||0),open:$('record-open').value==='open'}}const img=$('record-photo').files[0];if(img)data.photo=await fileToImage(img,480);if(id){await setDoc(doc(db,kind,id),data,{merge:true})}else{await addDoc(collection(db,kind),data)}$('edit-modal').classList.add('hidden')}catch(err){alert(errorMessage(err))}finally{btn.disabled=false}};
-async function removeRecord(kind,id){if(!confirm('Hapus data ini dari seluruh perangkat?'))return;try{assertAdmin();await deleteDoc(doc(db,kind,id))}catch(e){alert(errorMessage(e))}}
-function readOld(key){try{return JSON.parse(localStorage.getItem(key)||'null')}catch{return null}}
-$('import-legacy').onclick=async()=>{try{assertAdmin();const oldConfig=readOld('engkres_config_v2'),oldDrivers=readOld('engkres_drivers_v2'),oldShops=readOld('engkres_umkm_v2');if(!oldConfig&&!oldDrivers&&!oldShops){$('import-message').textContent='Data lama tidak ditemukan di browser/alamat website ini. Buka alamat lama di laptop tempat perubahan sebelumnya dilakukan.';return}const msg=`Data ditemukan: ${Array.isArray(oldDrivers)?oldDrivers.length:0} driver, ${Array.isArray(oldShops)?oldShops.length:0} UMKM, ${oldConfig?'pengaturan logo/WA ada':'pengaturan tidak ada'}. Data baru akan ditambahkan ke Firebase. Lanjut?`;if(!confirm(msg))return;const btn=$('import-legacy');btn.disabled=true;$('import-message').textContent='Memindahkan data lama ke Firebase…';if(oldConfig&&typeof oldConfig==='object'){let cfg={};if(oldConfig.phone1)cfg.phone1=cleanPhone(oldConfig.phone1);if(oldConfig.phone2)cfg.phone2=cleanPhone(oldConfig.phone2);if(oldConfig.logo)cfg.logo=await compressExisting(oldConfig.logo,300);await setDoc(settingRef(),{...cfg,updatedAt:serverTimestamp()},{merge:true})}let count=0;for(const [kind,arr] of [['drivers',oldDrivers],['umkm',oldShops]]){if(!Array.isArray(arr))continue;for(const x of arr){if(!x||!x.name)continue;const record={name:String(x.name).slice(0,100),photo:await compressExisting(x.photo,440),updatedAt:serverTimestamp()};if(kind==='drivers')Object.assign(record,{plate:String(x.plate||'-'),rating:Number(x.rating)||5,status:x.status||'online'});else Object.assign(record,{menu:String(x.menu||'-'),price:Number(x.price)||0,open:x.open!==false});const key='legacy-'+kind+'-'+String(x.id??count).replace(/[^A-Za-z0-9_-]/g,'_');await setDoc(doc(db,kind,key),record,{merge:true});count++}}$('import-message').textContent=`Berhasil memindahkan ${count} data dan pengaturan yang tersedia. Lihat hasilnya di HP lain.`;alert('Impor selesai. Cek aplikasi di HP lain.') }catch(e){$('import-message').textContent=errorMessage(e)}finally{$('import-legacy').disabled=false}};
-function listenRealtime(){onSnapshot(settingRef(),snap=>{initial.settings=true;settings=snap.exists()?snap.data():{};renderSettings();checkConnected()},err=>status('Gagal membaca pengaturan: '+errorMessage(err),'bad'));onSnapshot(collectionDrivers(),snap=>{initial.drivers=true;drivers=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>a.name.localeCompare(b.name));renderDrivers();renderAdminLists();checkConnected()},err=>status('Gagal membaca driver: '+errorMessage(err),'bad'));onSnapshot(collectionShops(),snap=>{initial.shops=true;shops=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>a.name.localeCompare(b.name));renderShops();renderAdminLists();checkConnected()},err=>status('Gagal membaca UMKM: '+errorMessage(err),'bad'))}
-function checkConnected(){if(initial.settings&&initial.drivers&&initial.shops)status('● Terhubung ke Firebase — perubahan diperbarui otomatis','online')}
-async function start(){setService('ride');updateFare();$('header-logo').src=fallbackLogo;renderDrivers();renderShops();const cfg=window.ENGKRES_FIREBASE_CONFIG||{},uid=String(window.ENGKRES_ADMIN_UID||'');if(!cfg.apiKey||!cfg.projectId||!cfg.appId||cfg.apiKey.includes('ISI_')||!uid||uid.includes('ISI_')){status('Firebase belum diatur — lengkapi firebase-config.js agar data dapat sinkron.','bad');return}try{const app=initializeApp(cfg);db=getFirestore(app);auth=getAuth(app);onAuthStateChanged(auth,u=>{authUser=u;isAdmin=!!u&&u.uid===uid;if(u&&!isAdmin){signOut(auth);alert('Akun tidak diizinkan sebagai Admin. Periksa UID Firebase.')};renderAuth()});listenRealtime()}catch(e){status('Gagal terhubung: '+errorMessage(e),'bad')}}
-start();
-</script>
-</body></html>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER -->
+    <header class="bg-gradient-to-r from-red-950 via-red-900 to-amber-950 text-white shadow-xl sticky top-0 z-50 border-b border-amber-500/30">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            
+            <!-- Branding & Gandrung Animated Icon -->
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl flex items-center justify-center shadow-lg animate-gandrung text-red-950 text-2xl font-bold border-2 border-amber-200 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=150&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <h1 class="text-lg md:text-2xl font-black tracking-tight flex items-center space-x-2">
+                        <span>Info Tengororejo</span>
+                        <span class="bg-amber-400/20 text-amber-300 text-[10px] px-2 py-0.5 rounded-full border border-amber-400/30 font-semibold hidden sm:inline-block">Songgon, Banyuwangi</span>
+                    </h1>
+                    <p class="text-xs text-amber-200 font-medium">Portal Berita Warga Dusun • By Cak Riyan</p>
+                </div>
+            </div>
+
+            <!-- Controls & Admin Auth Trigger -->
+            <div class="flex items-center space-x-3 mt-2 sm:mt-0">
+                <!-- Music Player Control (Admin & Public) -->
+                <div class="bg-black/40 px-3 py-1.5 rounded-full flex items-center space-x-2 text-xs backdrop-blur-md border border-white/20 shadow-inner">
+                    <button id="musicToggleBtn" onclick="toggleBackgroundMusic()" class="w-7 h-7 bg-amber-400 text-red-950 rounded-full flex items-center justify-center hover:scale-110 transition shadow font-bold">
+                        <i id="musicIcon" class="fa-solid fa-play ml-0.5 text-xs"></i>
+                    </button>
+                    <span id="musicStatusText" class="hidden sm:inline text-white/90 font-medium">Musik Gamelan</span>
+                    <audio id="bgMusic" loop src="https://actions.google.com/sounds/v1/ambiences/traditional_market.ogg"></audio>
+                </div>
+
+                <!-- Auth Nav Area -->
+                <div id="authNavArea">
+                    <button onclick="openAuthModal()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                        <i class="fa-solid fa-lock text-xs"></i>
+                        <span>Admin Login</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-6 space-y-8">
+
+        <!-- HERO SECTION WITH USER-SUPPLIED BANYUWANGI TRADITIONAL CARNIVAL GANDRUNG AESTHETIC BACKGROUND -->
+        <section class="relative rounded-3xl overflow-hidden shadow-2xl border border-red-900/40 text-white min-h-[460px] flex items-center">
+            <!-- Background Image using the requested elegant traditional/carnival Banyuwangi costume photo -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=1600&q=80');"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-red-950/95 via-red-900/85 to-black/75 backdrop-blur-[2px]"></div>
+            
+            <div class="relative z-10 p-6 md:p-12 max-w-3xl space-y-5">
+                <div class="flex flex-wrap gap-2 items-center">
+                    <span class="bg-amber-500/30 text-amber-300 border border-amber-400/40 text-xs font-semibold px-3.5 py-1 rounded-full uppercase tracking-wider inline-flex items-center space-x-2 shadow-sm">
+                        <i class="fa-solid fa-star text-[10px]"></i>
+                        <span>Portal Resmi Warga Dusun Tengororejo</span>
+                    </span>
+                    <span class="bg-red-900/60 text-white border border-red-500/40 text-xs font-semibold px-3.5 py-1 rounded-full inline-flex items-center space-x-1.5">
+                        <i class="fa-solid fa-location-dot text-amber-400 text-[10px]"></i>
+                        <span>Songgon, Banyuwangi</span>
+                    </span>
+                </div>
+                
+                <h2 class="text-3xl md:text-5xl font-black tracking-tight leading-tight text-white drop-shadow-md">
+                    Informasi Terkini Warga Dusun Tengororejo & Budaya Banyuwangi
+                </h2>
+                
+                <p class="text-slate-200 text-sm md:text-base leading-relaxed font-normal">
+                    Media berita online resmi Dusun Tengororejo yang dikelola oleh Cak Riyan. Dapatkan informasi kegiatan warga, galeri seni budaya penari Gandrung & Karnaval tradisional, serta cuaca & jam digital secara real-time.
+                </p>
+
+                <!-- WIDGETS: DIGITAL CLOCK & WEATHER SONGGON BANYUWANGI -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <!-- Digital Clock Box -->
+                    <div class="bg-black/50 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-amber-500/20 text-amber-300 rounded-xl flex items-center justify-center text-2xl font-bold border border-amber-400/30">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <div>
+                            <p id="liveClock" class="text-2xl md:text-3xl font-black text-amber-300 tracking-wider">00:00:00 WIB</p>
+                            <p id="liveDate" class="text-xs text-slate-300 font-medium">Selasa, 3 November 2026</p>
+                        </div>
+                    </div>
+
+                    <!-- Weather Songgon Banyuwangi Box -->
+                    <div class="bg-black/50 backdrop-blur-md p-4 rounded-2xl border border-white/20 shadow-xl flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 bg-sky-500/20 text-sky-300 rounded-xl flex items-center justify-center text-2xl font-bold border border-sky-400/30">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-semibold text-sky-300 uppercase tracking-wider">Songgon, Banyuwangi</h4>
+                                <p id="weatherTemp" class="text-xl font-bold text-white">28°C • Berawan Sejuk</p>
+                            </div>
+                        </div>
+                        <div class="text-right text-[11px] text-slate-300 font-medium">
+                            <p><i class="fa-solid fa-droplet mr-1 text-sky-400"></i><span id="weatherHum">78%</span></p>
+                            <p><i class="fa-solid fa-wind mr-1 text-emerald-400"></i><span id="weatherWind">12 km/j</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Gandrung Maskot Indicator -->
+            <div class="absolute right-6 bottom-6 hidden lg:flex items-center space-x-3 bg-black/60 backdrop-blur-md px-4 py-3 rounded-2xl border border-white/20 shadow-2xl animate-gandrung">
+                <div class="w-10 h-10 rounded-full overflow-hidden border border-amber-300">
+                    <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=150&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-xs font-bold text-amber-300">Pesona Seni Banyuwangi</p>
+                    <p class="text-[10px] text-white/80">Tari Gandrung Tengororejo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMIN DASHBOARD PANEL (HIDDEN UNLESS AUTHENTICATED AS ADMIN) -->
+        <section id="adminPanelContainer" class="hidden bg-amber-50/95 border-2 border-amber-400/80 rounded-3xl p-6 shadow-2xl space-y-6">
+            <div class="flex flex-wrap justify-between items-center border-b border-amber-200 pb-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-11 h-11 bg-amber-500 text-red-950 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-extrabold text-red-950">Panel Kontrol Admin (Cak Riyan)</h3>
+                        <p class="text-xs text-slate-600">Database Firebase Online: <span class="text-emerald-700 font-bold">Sinkronisasi Firestore</span></p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button onclick="toggleAdminMusicModal()" class="bg-amber-600 hover:bg-amber-700 text-white font-semibold px-3.5 py-2 rounded-xl text-xs shadow transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Musik Admin</span>
+                    </button>
+                    <button onclick="logoutAdmin()" class="bg-red-700 hover:bg-red-800 text-white font-medium px-4 py-2 rounded-xl text-xs shadow transition flex items-center space-x-1.5">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Keluar</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Tabs Navigation -->
+            <div class="flex flex-wrap gap-2">
+                <button onclick="switchAdminTab('berita')" id="tabBtnBerita" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-red-900 text-white shadow transition">Kelola Berita</button>
+                <button onclick="switchAdminTab('agenda')" id="tabBtnAgenda" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm">Kelola Agenda</button>
+                <button onclick="switchAdminTab('galeri')" id="tabBtnGaleri" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm">Kelola Galeri Foto</button>
+                <button onclick="switchAdminTab('kontak')" id="tabBtnKontak" class="px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm">Kelola Kontak</button>
+            </div>
+
+            <!-- TAB 1: BERITA -->
+            <div id="adminTabBerita" class="admin-tab-content space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-pen-to-square text-red-700"></i>
+                    <span id="formBeritaTitle">Tambah Berita / Kegiatan Baru</span>
+                </h4>
+                <form id="beritaForm" onsubmit="handleBeritaSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="beritaId">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Judul Berita</label>
+                        <input type="text" id="beritaJudul" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Kategori</label>
+                            <select id="beritaKategori" class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                                <option value="Berita Utama">Berita Utama</option>
+                                <option value="Kegiatan Warga">Kegiatan Warga</option>
+                                <option value="Seni & Budaya">Seni & Budaya</option>
+                                <option value="Pembangunan">Pembangunan</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Upload File Foto (JPG/PNG)</label>
+                            <div class="flex space-x-2">
+                                <input type="text" id="beritaImage" placeholder="URL atau upload file..." class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                                <input type="file" id="beritaFileUp" accept="image/png, image/jpeg" onchange="convertFileToBase64(this, 'beritaImage')" class="hidden">
+                                <button type="button" onclick="document.getElementById('beritaFileUp').click()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">Pilih File</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Isi Berita / Keterangan Lengkap</label>
+                        <textarea id="beritaIsi" rows="4" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetBeritaForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-red-800 hover:bg-red-900 text-white text-xs font-bold rounded-xl shadow">Simpan Berita</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB 2: AGENDA -->
+            <div id="adminTabAgenda" class="admin-tab-content hidden space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-calendar-days text-amber-600"></i>
+                    <span id="formAgendaTitle">Tambah Agenda Kegiatan Dusun</span>
+                </h4>
+                <form id="agendaForm" onsubmit="handleAgendaSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="agendaId">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Kegiatan</label>
+                            <input type="text" id="agendaJudul" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Waktu / Tanggal</label>
+                            <input type="text" id="agendaWaktu" placeholder="Contoh: Minggu, 15 November • 19.00 WIB" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Lokasi / Tempat</label>
+                        <input type="text" id="agendaLokasi" placeholder="Contoh: Balai Dusun Tengororejo" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetAgendaForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl shadow">Simpan Agenda</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB 3: GALERI -->
+            <div id="adminTabGaleri" class="admin-tab-content hidden space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-image text-red-700"></i>
+                    <span>Upload Foto Galeri (JPG / PNG)</span>
+                </h4>
+                <form id="galeriForm" onsubmit="handleGaleriSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="galeriId">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Keterangan Foto</label>
+                        <input type="text" id="galeriJudul" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Pilih File Foto JPG/PNG</label>
+                        <div class="flex space-x-2">
+                            <input type="text" id="galeriUrl" placeholder="URL atau upload file..." required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                            <input type="file" id="galeriFileUp" accept="image/png, image/jpeg" onchange="convertFileToBase64(this, 'galeriUrl')" class="hidden">
+                            <button type="button" onclick="document.getElementById('galeriFileUp').click()" class="bg-slate-200 hover:bg-slate-300 text-slate-800 px-4 py-2.5 rounded-xl text-xs font-bold whitespace-nowrap shadow-sm">Pilih File</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetGaleriForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-red-800 hover:bg-red-900 text-white text-xs font-bold rounded-xl shadow">Simpan Foto Galeri</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- TAB 4: KONTAK -->
+            <div id="adminTabKontak" class="admin-tab-content hidden space-y-4 bg-white p-6 rounded-2xl shadow-sm border border-amber-200">
+                <h4 class="font-bold text-slate-900 text-base flex items-center space-x-2 border-b pb-2">
+                    <i class="fa-solid fa-address-book text-amber-600"></i>
+                    <span id="formKontakTitle">Tambah / Edit Kontak Penting</span>
+                </h4>
+                <form id="kontakForm" onsubmit="handleKontakSubmit(event)" class="space-y-3">
+                    <input type="hidden" id="kontakId">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Nama Pejabat / Pengurus</label>
+                            <input type="text" id="kontakNama" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-700 mb-1">Jabatan / Peran</label>
+                            <input type="text" id="kontakJabatan" placeholder="Contoh: Kepala Dusun Tengororejo" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 mb-1">Nomor WhatsApp (Contoh: 08123456789)</label>
+                        <input type="text" id="kontakTelp" placeholder="08xxxxxxxxxx" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                    </div>
+                    <div class="flex justify-end space-x-2 pt-2">
+                        <button type="button" onclick="resetKontakForm()" class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-700 text-xs font-bold rounded-xl">Batal</button>
+                        <button type="submit" class="px-5 py-2 bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold rounded-xl shadow">Simpan Kontak</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- MAIN GRID: BERITA & AGENDA -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <!-- LEFT 2 COLS: BERITA TERKINI -->
+            <div id="beritaSection" class="lg:col-span-2 space-y-6">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-3.5 h-8 bg-red-700 rounded-full shadow"></div>
+                        <h3 class="text-xl font-bold text-slate-900 tracking-tight">Berita & Kegiatan Dusun</h3>
+                    </div>
+                    <span class="text-xs text-slate-500 bg-white px-3 py-1.5 rounded-full border shadow-sm font-medium">Sinkron Otomatis Real-time</span>
+                </div>
+
+                <div id="beritaListContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="col-span-full bg-white p-8 rounded-3xl text-center text-slate-400 border border-slate-200 shadow-sm">
+                        <i class="fa-solid fa-spinner fa-spin text-3xl mb-2 text-red-700"></i>
+                        <p class="text-sm font-medium">Memuat data berita dari server Firebase...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT 1 COL: AGENDA & GANDRUNG MASKOT -->
+            <div class="space-y-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3.5 h-8 bg-amber-500 rounded-full shadow"></div>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Agenda Warga</h3>
+                </div>
+
+                <div id="agendaListContainer" class="space-y-4">
+                    <div class="bg-white p-6 rounded-3xl text-center text-slate-400 border border-slate-200 shadow-sm">
+                        <i class="fa-solid fa-spinner fa-spin text-lg mb-1 text-amber-600"></i>
+                        <p class="text-xs">Memuat agenda...</p>
+                    </div>
+                </div>
+
+                <!-- Gandrung Cultural Card -->
+                <div class="bg-gradient-to-br from-amber-500 via-amber-600 to-red-800 text-white rounded-3xl p-6 shadow-xl text-center relative overflow-hidden border border-amber-300/40">
+                    <div class="absolute -right-4 -bottom-4 opacity-15 w-32 h-32 rounded-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=300&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-16 h-16 rounded-2xl overflow-hidden mx-auto mb-3 border-2 border-amber-200 shadow-lg animate-gandrung">
+                        <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=150&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="font-extrabold text-lg mb-1 drop-shadow">Pesona Seni Budaya Banyuwangi</h4>
+                    <p class="text-xs text-amber-100 leading-relaxed mb-4">
+                        Dusun Tengororejo senantiasa menjunjung tinggi nilai budaya leluhur penari Gandrung sebagai simbol kebersamaan, keramahan, dan gotong royong warga Songgon.
+                    </p>
+                    <span class="inline-block bg-black/30 px-3.5 py-1.5 rounded-full text-xs font-bold backdrop-blur border border-white/20 shadow">
+                        #TengororejoMajuDanBerbudaya
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- GALERI FOTO WARGA -->
+        <section class="space-y-6 pt-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3.5 h-8 bg-red-700 rounded-full shadow"></div>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Galeri Foto Dusun</h3>
+                </div>
+                <span class="text-xs text-slate-500 font-medium">Dokumentasi JPG/PNG Warga</span>
+            </div>
+
+            <div id="galeriListContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 border border-slate-200">
+                    <p class="text-xs font-medium">Memuat galeri foto...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTAK PENTING -->
+        <section id="kontakSection" class="space-y-6 pt-4 pb-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-3.5 h-8 bg-amber-500 rounded-full shadow"></div>
+                    <h3 class="text-xl font-bold text-slate-900 tracking-tight">Kontak Pejabat & Pengurus Dusun</h3>
+                </div>
+                <span class="text-xs text-slate-500 font-medium">Layanan Cepat Warga</span>
+            </div>
+
+            <div id="kontakListContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 border border-slate-200">
+                    <p class="text-xs font-medium">Memuat daftar kontak...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 text-xs py-10 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden border border-amber-400">
+                    <img src="https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=100&q=80" alt="Gandrung" class="w-full h-full object-cover">
+                </div>
+                <div>
+                    <p class="text-white font-bold text-sm">Info Tengororejo by Cak Riyan</p>
+                    <p class="text-slate-400">Portal Berita Resmi Warga Dusun Tengororejo, Songgon — Banyuwangi</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right">
+                <p>&copy; 2026 Dusun Tengororejo. All Rights Reserved.</p>
+                <p class="text-amber-400/80 font-medium mt-1">Database Online Firebase Tersinkron Otomatis</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SHARE MODAL -->
+    <div id="shareModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl relative space-y-4 text-center">
+            <button onclick="closeShareModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-2xl mx-auto flex items-center justify-center text-xl font-bold shadow-inner">
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold text-slate-900">Bagikan ke Sosial Media</h3>
+                <p id="shareItemTitle" class="text-xs text-slate-500 mt-1 line-clamp-2 font-medium"></p>
+            </div>
+            <div class="grid grid-cols-2 gap-3 pt-2">
+                <a id="shareWaBtn" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <a id="shareFbBtn" href="#" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-facebook text-sm"></i>
+                    <span>Facebook</span>
+                </a>
+                <a id="shareTwBtn" href="#" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-brands fa-x-twitter text-sm"></i>
+                    <span>Twitter / X</span>
+                </a>
+                <button onclick="copyShareLink()" class="bg-slate-800 hover:bg-slate-900 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center space-x-2 shadow transition">
+                    <i class="fa-solid fa-copy text-sm"></i>
+                    <span>Salin Tautan</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTHENTICATION MODAL (ADMIN LOGIN SECURE) -->
+    <div id="authModal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl relative space-y-6 border border-slate-100">
+            <button onclick="closeAuthModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-red-100 text-red-800 rounded-2xl mx-auto flex items-center justify-center text-xl font-bold shadow-inner">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900">Login Administrator</h3>
+                <p class="text-xs text-slate-500">Masukkan email dan kata sandi akun Admin yang terdaftar di Firebase Authentication.</p>
+            </div>
+
+            <form id="loginForm" onsubmit="handleLoginSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Email Admin</label>
+                    <input type="email" id="loginUsername" placeholder="email-admin@contoh.com" autocomplete="username" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 mb-1">Kata Sandi</label>
+                    <input type="password" id="loginPassword" placeholder="••••••••" autocomplete="current-password" required class="w-full px-3.5 py-2.5 border rounded-xl text-sm focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div id="loginErrorMsg" class="text-red-600 text-xs hidden font-semibold text-center"></div>
+                <button type="submit" class="w-full bg-red-800 hover:bg-red-900 text-white font-bold py-3 rounded-xl text-sm shadow transition">
+                    Masuk ke Panel Admin
+                </button>
+            </form>
+            <div class="bg-amber-50 p-3 rounded-xl border border-amber-200 text-center">
+                <p class="text-[11px] text-amber-900 font-medium">
+                    <i class="fa-solid fa-shield-halved mr-1"></i> Keamanan Database: Aturan Firebase aktif (Publik baca, Admin ubah).
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN ONLINE MUSIC PLAYER MODAL -->
+    <div id="adminMusicModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl space-y-5 text-center relative border border-slate-200">
+            <button onclick="toggleAdminMusicModal()" class="absolute top-4 right-4 w-8 h-8 bg-slate-100 hover:bg-slate-200 text-slate-600 rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-3xl mx-auto flex items-center justify-center text-2xl font-bold shadow-inner animate-pulse">
+                <i class="fa-solid fa-music"></i>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold text-slate-900">Musik Latar Admin</h4>
+                <p class="text-xs text-slate-500 mt-1">Putar musik tradisional instrumen gamelan Banyuwangi untuk menemani saat Anda memperbarui berita dusun.</p>
+            </div>
+            <div class="flex items-center justify-center space-x-3 pt-2">
+                <button onclick="toggleBackgroundMusic()" id="modalMusicPlayBtn" class="bg-red-800 hover:bg-red-900 text-white px-6 py-2.5 rounded-xl text-xs font-bold shadow flex items-center space-x-2">
+                    <i id="modalMusicIcon" class="fa-solid fa-play"></i>
+                    <span id="modalMusicText">Putar Musik</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION MODAL -->
+    <div id="notificationModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl text-center space-y-4">
+            <div id="notifIcon" class="w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl font-bold text-white bg-green-600">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 id="notifTitle" class="text-lg font-bold text-slate-900">Berhasil</h4>
+            <p id="notifMessage" class="text-xs text-slate-600 leading-relaxed">Pesan...</p>
+            <button onclick="closeNotification()" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 rounded-xl text-xs shadow">
+                OK, Mengerti
+            </button>
+        </div>
+    </div>
+
+    <!-- FIREBASE APP & SCRIPTS -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, collection, addDoc, updateDoc, deleteDoc, doc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        // Konfigurasi Web App Firebase (bukan password). Proyek: tengororejo-saiki.
+        const firebaseConfig = {
+            apiKey: "AIzaSyAI6HmjLa70zBkfvV0_v3biTsLD0GF_3H4",
+            authDomain: "tengororejo-saiki.firebaseapp.com",
+            projectId: "tengororejo-saiki",
+            storageBucket: "tengororejo-saiki.firebasestorage.app",
+            messagingSenderId: "497993610431",
+            appId: "1:497993610431:web:94afaaea7b41847db5420a",
+            measurementId: "G-M6V7E8Y83Z"
+        };
+        // Admin yang dibuat di Firebase Authentication → Users.
+        const ADMIN_UID = "LmvIwLFeJZSaexDcJs22loZSeBu2";
+        const isAdminUser = (user) => Boolean(user && user.uid === ADMIN_UID);
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const auth = getAuth(app);
+        let currentUser = null;
+        const latestData = { berita: [], agenda: [], galeri: [], kontak: [] };
+        function refreshAllLists() {
+            renderBeritaList(latestData.berita);
+            renderAgendaList(latestData.agenda);
+            renderGaleriList(latestData.galeri);
+            renderKontakList(latestData.kontak);
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            // Start Real-time Clock
+            startLiveClock();
+            
+            if (auth) {
+                onAuthStateChanged(auth, (user) => {
+                    currentUser = user;
+                    refreshAllLists();
+                    const authNavArea = document.getElementById('authNavArea');
+                    const adminPanelContainer = document.getElementById('adminPanelContainer');
+
+                    if (isAdminUser(user)) {
+                        authNavArea.innerHTML = `
+                            <button onclick="toggleAdminPanelScroll()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                                <i class="fa-solid fa-gauge text-xs"></i>
+                                <span>Panel Admin</span>
+                            </button>
+                        `;
+                        adminPanelContainer.classList.remove('hidden');
+                    } else {
+                        authNavArea.innerHTML = `
+                            <button onclick="openAuthModal()" class="bg-amber-400 hover:bg-amber-300 text-red-950 font-bold px-4 py-2 rounded-xl text-xs md:text-sm shadow-md transition flex items-center space-x-2">
+                                <i class="fa-solid fa-lock text-xs"></i>
+                                <span>Admin Login</span>
+                            </button>
+                        `;
+                        adminPanelContainer.classList.add('hidden');
+                    }
+                });
+            }
+
+            initFirestoreListeners();
+        });
+
+        function startLiveClock() {
+            function updateClock() {
+                const now = new Date();
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                document.getElementById('liveClock').innerText = `${hours}:${minutes}:${seconds} WIB`;
+                
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('liveDate').innerText = now.toLocaleDateString('id-ID', options);
+            }
+            updateClock();
+            setInterval(updateClock, 1000);
+        }
+
+        // Login Admin yang sesungguhnya melalui Firebase Authentication.
+        window.handleLoginSubmit = async function(event) {
+            event.preventDefault();
+            const email = document.getElementById('loginUsername').value.trim();
+            const passwordEl = document.getElementById('loginPassword');
+            const errorEl = document.getElementById('loginErrorMsg');
+            errorEl.classList.add('hidden');
+            try {
+                const credential = await signInWithEmailAndPassword(auth, email, passwordEl.value);
+                passwordEl.value = '';
+                if (!isAdminUser(credential.user)) {
+                    await signOut(auth);
+                    errorEl.innerText = 'Akun ini tidak diberi izin sebagai Admin.';
+                    errorEl.classList.remove('hidden');
+                    return;
+                }
+                closeAuthModal();
+                showCustomNotification('Login Berhasil', 'Selamat datang di panel Admin!', 'success');
+            } catch (error) {
+                console.error('Firebase Admin login error:', error.code || error);
+                errorEl.innerText = 'Login gagal. Periksa email Admin, kata sandi, dan koneksi internet.';
+                errorEl.classList.remove('hidden');
+            }
+        };
+
+        window.logoutAdmin = async function() {
+            try {
+                await signOut(auth);
+                showCustomNotification('Keluar', 'Anda telah keluar dari Panel Admin.', 'success');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } catch (error) {
+                showCustomNotification('Gagal', 'Tidak berhasil keluar dari akun Admin.', 'error');
+            }
+        };
+
+        window.toggleAdminPanelScroll = function() {
+            const panel = document.getElementById('adminPanelContainer');
+            panel.scrollIntoView({ behavior: 'smooth' });
+        };
+
+        // FIRESTORE REAL-TIME LISTENERS
+        function initFirestoreListeners() {
+
+            // 1. Berita
+            onSnapshot(collection(db, 'berita'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                items.sort((a,b) => (b.createdAt || 0) - (a.createdAt || 0));
+                latestData.berita = items;
+                renderBeritaList(items);
+            }, (err) => { 
+                console.error('Berita Firestore:', err);
+                showFirestoreError('beritaListContainer'); 
+            });
+
+            // 2. Agenda
+            onSnapshot(collection(db, 'agenda'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                items.sort((a,b) => (b.createdAt || 0) - (a.createdAt || 0));
+                latestData.agenda = items;
+                renderAgendaList(items);
+            }, (err) => {
+                console.error('Agenda Firestore:', err);
+                showFirestoreError('agendaListContainer');
+            });
+
+            // 3. Galeri
+            onSnapshot(collection(db, 'galeri'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                items.sort((a,b) => (b.createdAt || 0) - (a.createdAt || 0));
+                latestData.galeri = items;
+                renderGaleriList(items);
+            }, (err) => {
+                console.error('Galeri Firestore:', err);
+                showFirestoreError('galeriListContainer');
+            });
+
+            // 4. Kontak
+            onSnapshot(collection(db, 'kontak'), (snapshot) => {
+                const items = [];
+                snapshot.forEach(docSnap => items.push({ id: docSnap.id, ...docSnap.data() }));
+                latestData.kontak = items;
+                renderKontakList(items);
+            }, (err) => {
+                console.error('Kontak Firestore:', err);
+                showFirestoreError('kontakListContainer');
+            });
+        }
+
+        // RENDER UI
+        function renderBeritaList(items) {
+            const container = document.getElementById('beritaListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="col-span-full bg-white p-8 rounded-3xl text-center text-slate-500 border border-slate-200">Belum ada berita.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="h-48 overflow-hidden relative bg-slate-100">
+                            <img src="${safeImageSrc(item.image)}" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=600&q=80'" 
+                                 class="w-full h-full object-cover hover:scale-105 transition duration-500" alt="Berita">
+                            <span class="absolute top-3 left-3 bg-red-800 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow">
+                                ${escapeHtml(item.kategori || 'Berita')}
+                            </span>
+                        </div>
+                        <div class="p-5 space-y-2">
+                            <div class="text-[11px] text-slate-400 flex items-center justify-between font-medium">
+                                <span class="flex items-center space-x-1.5"><i class="fa-regular fa-calendar"></i><span>${item.tanggal || 'Baru saja'}</span></span>
+                                <button onclick="openShareModal('${encodeURIComponent(item.judul)}')" class="bg-amber-100 hover:bg-amber-200 text-amber-900 px-2.5 py-1 rounded-lg text-xs font-bold transition flex items-center space-x-1 shadow-sm">
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                    <span>Bagikan</span>
+                                </button>
+                            </div>
+                            <h4 class="font-extrabold text-slate-900 text-base leading-snug">${escapeHtml(item.judul)}</h4>
+                            <p class="text-xs text-slate-600 line-clamp-3 leading-relaxed">${escapeHtml(item.isi)}</p>
+                        </div>
+                    </div>
+                    ${isAdminUser(currentUser) ? `
+                        <div class="px-5 pb-5 pt-2 flex justify-end space-x-2 border-t border-slate-100 bg-slate-50/50">
+                            <button onclick="editBerita('${item.id}', '${encodeURIComponent(item.judul)}', '${encodeURIComponent(item.kategori)}', '${encodeURIComponent(item.image)}', '${encodeURIComponent(item.isi)}')" class="bg-amber-500 hover:bg-amber-600 text-white text-xs px-3 py-1.5 rounded-xl font-bold">Edit</button>
+                            <button onclick="deleteDocItem('berita', '${item.id}')" class="bg-red-700 hover:bg-red-800 text-white text-xs px-3 py-1.5 rounded-xl font-bold">Hapus</button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderAgendaList(items) {
+            const container = document.getElementById('agendaListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="bg-white p-5 rounded-3xl text-center text-slate-400 text-xs border shadow-sm">Belum ada agenda.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white p-5 rounded-3xl border border-amber-200 shadow-sm space-y-2">
+                    <div class="text-[11px] text-amber-700 font-bold flex items-center justify-between">
+                        <span class="flex items-center space-x-1.5"><i class="fa-regular fa-clock"></i><span>${escapeHtml(item.waktu)}</span></span>
+                        <button onclick="openShareModal('${encodeURIComponent(item.judul)}')" class="text-amber-800 hover:text-amber-900 text-xs font-bold"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                    <h4 class="font-bold text-slate-900 text-sm">${escapeHtml(item.judul)}</h4>
+                    <p class="text-xs text-slate-600 flex items-center space-x-1.5">
+                        <i class="fa-solid fa-location-dot text-red-700"></i>
+                        <span>${escapeHtml(item.lokasi)}</span>
+                    </p>
+                    ${isAdminUser(currentUser) ? `
+                        <div class="flex justify-end space-x-3 pt-2 border-t border-slate-100">
+                            <button onclick="editAgenda('${item.id}', '${encodeURIComponent(item.judul)}', '${encodeURIComponent(item.waktu)}', '${encodeURIComponent(item.lokasi)}')" class="text-amber-600 hover:underline text-xs font-bold">Edit</button>
+                            <button onclick="deleteDocItem('agenda', '${item.id}')" class="text-red-600 hover:underline text-xs font-bold">Hapus</button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderGaleriList(items) {
+            const container = document.getElementById('galeriListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 text-xs border">Belum ada foto galeri.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group relative">
+                    <div class="h-36 overflow-hidden bg-slate-100">
+                        <img src="${safeImageSrc(item.url)}" 
+                             onerror="this.src='https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=400&q=80'"
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300" alt="Galeri">
+                    </div>
+                    <div class="p-3.5 flex justify-between items-center">
+                        <p class="text-xs font-bold text-slate-800 truncate">${escapeHtml(item.judul)}</p>
+                        <button onclick="openShareModal('${encodeURIComponent(item.judul)}')" class="text-amber-600 hover:text-amber-700 text-xs"><i class="fa-solid fa-share-nodes"></i></button>
+                    </div>
+                    ${isAdminUser(currentUser) ? `
+                        <div class="absolute top-2 right-2">
+                            <button onclick="deleteDocItem('galeri', '${item.id}')" class="bg-red-700 text-white w-7 h-7 rounded-full flex items-center justify-center text-xs shadow hover:bg-red-800 font-bold">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function renderKontakList(items) {
+            const container = document.getElementById('kontakListContainer');
+            if (items.length === 0) {
+                container.innerHTML = `<div class="col-span-full bg-white p-6 rounded-3xl text-center text-slate-400 text-xs border">Belum ada kontak.</div>`;
+                return;
+            }
+            container.innerHTML = items.map(item => `
+                <div class="bg-white p-5 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-3">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-amber-100 text-amber-800 rounded-2xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">${escapeHtml(item.nama)}</h4>
+                            <p class="text-xs text-amber-700 font-bold">${escapeHtml(item.jabatan)}</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between pt-2 border-t border-slate-100">
+                        <a href="https://wa.me/${item.telp.replace(/[^0-9]/g, '')}" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold flex items-center space-x-1.5 shadow-sm">
+                            <i class="fa-brands fa-whatsapp text-sm"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        ${isAdminUser(currentUser) ? `
+                            <div class="flex space-x-2">
+                                <button onclick="editKontak('${item.id}', '${encodeURIComponent(item.nama)}', '${encodeURIComponent(item.jabatan)}', '${encodeURIComponent(item.telp)}')" class="text-amber-600 hover:underline text-xs font-bold">Edit</button>
+                                <button onclick="deleteDocItem('kontak', '${item.id}')" class="text-red-600 hover:underline text-xs font-bold">Hapus</button>
+                            </div>
+                        ` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ADMIN FORM SUBMISSIONS
+        window.handleBeritaSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!isAdminUser(currentUser)) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu untuk menyimpan perubahan.', 'error');
+                return;
+            }
+            const id = document.getElementById('beritaId').value;
+            const data = {
+                judul: document.getElementById('beritaJudul').value,
+                kategori: document.getElementById('beritaKategori').value,
+                image: document.getElementById('beritaImage').value,
+                isi: document.getElementById('beritaIsi').value,
+                tanggal: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' }),
+                createdAt: Date.now()
+            };
+            if (data.image && data.image.length > 700000) {
+                showCustomNotification('Foto Terlalu Besar', 'Kompres foto sebelum disimpan.', 'error');
+                return;
+            }
+            try {
+                const col = collection(db, 'berita');
+                if (id) {
+                    await updateDoc(doc(db, 'berita', id), data);
+                    showCustomNotification('Berhasil', 'Berita diperbarui!', 'success');
+                } else {
+                    await addDoc(col, data);
+                    showCustomNotification('Berhasil', 'Berita diterbitkan!', 'success');
+                }
+                resetBeritaForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin ditolak oleh aturan Firebase. Pastikan Anda sudah login admin.', 'error');
+            }
+        };
+
+        window.handleAgendaSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!isAdminUser(currentUser)) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            const id = document.getElementById('agendaId').value;
+            const data = {
+                judul: document.getElementById('agendaJudul').value,
+                waktu: document.getElementById('agendaWaktu').value,
+                lokasi: document.getElementById('agendaLokasi').value,
+                createdAt: Date.now()
+            };
+            try {
+                const col = collection(db, 'agenda');
+                if (id) {
+                    await updateDoc(doc(db, 'agenda', id), data);
+                    showCustomNotification('Berhasil', 'Agenda diperbarui!', 'success');
+                } else {
+                    await addDoc(col, data);
+                    showCustomNotification('Berhasil', 'Agenda ditambahkan!', 'success');
+                }
+                resetAgendaForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        window.handleGaleriSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!isAdminUser(currentUser)) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            const data = {
+                judul: document.getElementById('galeriJudul').value,
+                url: document.getElementById('galeriUrl').value,
+                createdAt: Date.now()
+            };
+            if (data.url && data.url.length > 700000) {
+                showCustomNotification('Foto Terlalu Besar', 'Kompres foto sebelum disimpan.', 'error');
+                return;
+            }
+            try {
+                await addDoc(collection(db, 'galeri'), data);
+                showCustomNotification('Berhasil', 'Foto galeri diunggah!', 'success');
+                resetGaleriForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        window.handleKontakSubmit = async function(e) {
+            e.preventDefault();
+            if (!db) return;
+            if (!isAdminUser(currentUser)) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            const id = document.getElementById('kontakId').value;
+            const data = {
+                nama: document.getElementById('kontakNama').value,
+                jabatan: document.getElementById('kontakJabatan').value,
+                telp: document.getElementById('kontakTelp').value
+            };
+            try {
+                const col = collection(db, 'kontak');
+                if (id) {
+                    await updateDoc(doc(db, 'kontak', id), data);
+                    showCustomNotification('Berhasil', 'Kontak diperbarui!', 'success');
+                } else {
+                    await addDoc(col, data);
+                    showCustomNotification('Berhasil', 'Kontak ditambahkan!', 'success');
+                }
+                resetKontakForm();
+            } catch (err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        window.deleteDocItem = async function(colName, id) {
+            if (!confirm("Hapus data ini?")) return;
+            if (!isAdminUser(currentUser)) {
+                showCustomNotification('Akses Ditolak', 'Silakan login sebagai Admin terlebih dahulu.', 'error');
+                return;
+            }
+            try {
+                await deleteDoc(doc(db, colName, id));
+                showCustomNotification('Berhasil', 'Data dihapus.', 'success');
+            } catch(err) {
+                console.error(err);
+                showCustomNotification('Gagal', 'Izin Firebase ditolak.', 'error');
+            }
+        };
+
+        // EDIT & RESET HELPERS
+        window.editBerita = function(id, judul, kategori, image, isi) {
+            document.getElementById('beritaId').value = id;
+            document.getElementById('beritaJudul').value = decodeURIComponent(judul);
+            document.getElementById('beritaKategori').value = decodeURIComponent(kategori);
+            document.getElementById('beritaImage').value = decodeURIComponent(image);
+            document.getElementById('beritaIsi').value = decodeURIComponent(isi);
+            document.getElementById('formBeritaTitle').innerText = "Edit Berita";
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+        window.resetBeritaForm = function() {
+            document.getElementById('beritaForm').reset();
+            document.getElementById('beritaId').value = '';
+            document.getElementById('formBeritaTitle').innerText = "Tambah Berita / Kegiatan Baru";
+        };
+
+        window.editAgenda = function(id, judul, waktu, lokasi) {
+            document.getElementById('agendaId').value = id;
+            document.getElementById('agendaJudul').value = decodeURIComponent(judul);
+            document.getElementById('agendaWaktu').value = decodeURIComponent(waktu);
+            document.getElementById('agendaLokasi').value = decodeURIComponent(lokasi);
+            document.getElementById('formAgendaTitle').innerText = "Edit Agenda";
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+        window.resetAgendaForm = function() {
+            document.getElementById('agendaForm').reset();
+            document.getElementById('agendaId').value = '';
+            document.getElementById('formAgendaTitle').innerText = "Tambah Agenda Kegiatan Dusun";
+        };
+
+        window.editKontak = function(id, nama, jabatan, telp) {
+            document.getElementById('kontakId').value = id;
+            document.getElementById('kontakNama').value = decodeURIComponent(nama);
+            document.getElementById('kontakJabatan').value = decodeURIComponent(jabatan);
+            document.getElementById('kontakTelp').value = decodeURIComponent(telp);
+            document.getElementById('formKontakTitle').innerText = "Edit Kontak";
+            window.scrollTo({ top: 300, behavior: 'smooth' });
+        };
+        window.resetKontakForm = function() {
+            document.getElementById('kontakForm').reset();
+            document.getElementById('kontakId').value = '';
+            document.getElementById('formKontakTitle').innerText = "Tambah / Edit Kontak Penting";
+        };
+        window.resetGaleriForm = function() {
+            document.getElementById('galeriForm').reset();
+            document.getElementById('galeriId').value = '';
+        };
+
+        // Kompres foto sebelum disimpan di dokumen Firestore (< 1 MiB).
+        // Untuk foto resolusi asli dalam jumlah banyak, gunakan layanan penyimpanan file terpisah.
+        window.convertFileToBase64 = function(inputEl, targetId) {
+            const file = inputEl.files && inputEl.files[0];
+            if (!file) return;
+            if (!['image/jpeg', 'image/png'].includes(file.type)) {
+                showCustomNotification('Gagal', 'Hanya foto JPG atau PNG yang diizinkan.', 'error');
+                inputEl.value = '';
+                return;
+            }
+            if (file.size > 12 * 1024 * 1024) {
+                showCustomNotification('Perhatian', 'Ukuran foto asal maksimal 12 MB.', 'error');
+                inputEl.value = '';
+                return;
+            }
+            const objectUrl = URL.createObjectURL(file);
+            const img = new Image();
+            img.onload = function() {
+                URL.revokeObjectURL(objectUrl);
+                const scale = Math.min(1, 1200 / Math.max(img.width, img.height));
+                const canvas = document.createElement('canvas');
+                canvas.width = Math.round(img.width * scale);
+                canvas.height = Math.round(img.height * scale);
+                const context = canvas.getContext('2d');
+                context.fillStyle = '#ffffff';
+                context.fillRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(img, 0, 0, canvas.width, canvas.height);
+                let dataUrl = '';
+                for (const quality of [0.78, 0.65, 0.50, 0.36]) {
+                    dataUrl = canvas.toDataURL('image/jpeg', quality);
+                    if (dataUrl.length < 500000) break;
+                }
+                if (dataUrl.length >= 700000) {
+                    showCustomNotification('Gagal', 'Foto masih terlalu besar, pilih gambar lebih kecil.', 'error');
+                    return;
+                }
+                document.getElementById(targetId).value = dataUrl;
+                showCustomNotification('Berhasil', 'Foto siap disimpan (sudah dikompres).', 'success');
+            };
+            img.onerror = function() {
+                URL.revokeObjectURL(objectUrl);
+                showCustomNotification('Gagal', 'File gambar tidak dapat dibaca.', 'error');
+            };
+            img.src = objectUrl;
+        };
+
+        function showFirestoreError(id) {
+            const container = document.getElementById(id);
+            if (container) container.innerHTML = `<div class="col-span-full bg-red-50 border border-red-200 text-red-800 text-xs rounded-xl p-4">Data belum dapat dimuat. Periksa koneksi internet dan aturan Firestore untuk koleksi ini.</div>`;
+        }
+
+        function safeImageSrc(src) {
+            const fallback = 'https://images.unsplash.com/photo-1596401340636-1e095d7d2965?auto=format&fit=crop&w=600&q=80';
+            if (typeof src !== 'string') return fallback;
+            if (/^data:image\/(jpeg|png);base64,[A-Za-z0-9+/=]+$/.test(src)) return src;
+            try { const u = new URL(src); if (u.protocol === 'https:') return escapeHtml(u.href); }
+            catch (_) {}
+            return fallback;
+        }
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>'"]/g, tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag));
+        }
+    </script>
+
+    <!-- SOCIAL MEDIA SHARE & INTERACTION SCRIPTS -->
+    <script>
+        let currentShareTitle = '';
+
+        window.openShareModal = function(encodedTitle) {
+            currentShareTitle = decodeURIComponent(encodedTitle);
+            document.getElementById('shareItemTitle').innerText = currentShareTitle;
+            
+            const shareText = `Info Tengororejo: "${currentShareTitle}". Baca berita selengkapnya di Portal Resmi Warga Dusun Tengororejo by Cak Riyan (Songgon, Banyuwangi): ${window.location.href}`;
+            const encodedText = encodeURIComponent(shareText);
+            const currentUrl = encodeURIComponent(window.location.href);
+
+            document.getElementById('shareWaBtn').href = `https://api.whatsapp.com/send?text=${encodedText}`;
+            document.getElementById('shareFbBtn').href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+            document.getElementById('shareTwBtn').href = `https://twitter.com/intent/tweet?text=${encodedText}`;
+
+            document.getElementById('shareModal').classList.remove('hidden');
+        }
+
+        window.closeShareModal = function() {
+            document.getElementById('shareModal').classList.add('hidden');
+        }
+
+        window.copyShareLink = function() {
+            const shareText = `Info Tengororejo: "${currentShareTitle}". ${window.location.href}`;
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(shareText).then(() => {
+                    showCustomNotification('Berhasil', 'Tautan berita berhasil disalin ke clipboard!', 'success');
+                    closeShareModal();
+                }).catch(() => fallbackCopy(shareText));
+            } else {
+                fallbackCopy(shareText);
+            }
+        }
+
+        function fallbackCopy(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showCustomNotification('Berhasil', 'Tautan berita berhasil disalin!', 'success');
+                closeShareModal();
+            } catch (err) {
+                showCustomNotification('Gagal', 'Tidak dapat menyalin tautan.', 'error');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        let isPlayingMusic = false;
+        function toggleBackgroundMusic() {
+            const audio = document.getElementById('bgMusic');
+            const icon = document.getElementById('musicIcon');
+            const modalIcon = document.getElementById('modalMusicIcon');
+            const text = document.getElementById('musicStatusText');
+            const modalText = document.getElementById('modalMusicText');
+
+            if (isPlayingMusic) {
+                audio.pause();
+                if (icon) icon.className = "fa-solid fa-play ml-0.5 text-xs";
+                if (modalIcon) modalIcon.className = "fa-solid fa-play";
+                if (text) text.innerText = "Musik Gamelan";
+                if (modalText) modalText.innerText = "Putar Musik";
+                isPlayingMusic = false;
+            } else {
+                audio.play().catch(e => console.log(e));
+                if (icon) icon.className = "fa-solid fa-pause text-xs";
+                if (modalIcon) modalIcon.className = "fa-solid fa-pause";
+                if (text) text.innerText = "Memutar Musik";
+                if (modalText) modalText.innerText = "Jeda Musik";
+                isPlayingMusic = true;
+            }
+        }
+
+        function openAuthModal() {
+            document.getElementById('authModal').classList.remove('hidden');
+        }
+        function closeAuthModal() {
+            document.getElementById('authModal').classList.add('hidden');
+            document.getElementById('loginErrorMsg').classList.add('hidden');
+        }
+        function toggleAdminMusicModal() {
+            document.getElementById('adminMusicModal').classList.toggle('hidden');
+        }
+
+        function showCustomNotification(title, message, type = 'success') {
+            document.getElementById('notifTitle').innerText = title;
+            document.getElementById('notifMessage').innerText = message;
+            const icon = document.getElementById('notifIcon');
+            icon.className = type === 'success' ? "w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl font-bold text-white bg-green-600" : "w-12 h-12 rounded-full mx-auto flex items-center justify-center text-xl font-bold text-white bg-red-600";
+            document.getElementById('notificationModal').classList.remove('hidden');
+        }
+        function closeNotification() {
+            document.getElementById('notificationModal').classList.add('hidden');
+        }
+
+        function switchAdminTab(tabName) {
+            const tabs = ['berita', 'agenda', 'galeri', 'kontak'];
+            tabs.forEach(t => {
+                const content = document.getElementById('adminTab' + t.charAt(0).toUpperCase() + t.slice(1));
+                const btn = document.getElementById('tabBtn' + t.charAt(0).toUpperCase() + t.slice(1));
+                if (t === tabName) {
+                    content.classList.remove('hidden');
+                    btn.className = "px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-red-900 text-white shadow transition";
+                } else {
+                    content.classList.add('hidden');
+                    btn.className = "px-4 py-2 rounded-xl text-xs md:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 transition shadow-sm";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
